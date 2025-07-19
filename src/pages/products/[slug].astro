@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { siteConfig } from '../../config/site.js';
+
+export async function getStaticPaths() {
+  const { products } = siteConfig;
+  return products.map((product) => ({
+    params: { slug: product.slug },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const { theme, colors } = siteConfig;
+const currentColors = colors[theme.primary as keyof typeof colors];
+---
+
+<Layout title={product.name} description={product.description}>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <!-- Product Info -->
+          <div class="mb-8 lg:mb-0">
+            <div class="mb-4">
+              <span class={`${currentColors.primary} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                {product.category}
+              </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {product.name}
+            </h1>
+            <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+              {product.shortDescription}
+            </p>
+            <div class="mb-8">
+              <span class="text-3xl font-bold text-gray-900">{product.price}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="/contact"
+                class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center`}
+              >
+                Get Quote
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a 
+                href="/contact"
+                class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 inline-flex items-center justify-center"
+              >
+                Schedule Demo
+              </a>
+            </div>
+          </div>
+          
+          <!-- Product Image -->
+          <div class="relative">
+            <img 
+              src={product.image} 
+              alt={product.name}
+              class="rounded-lg shadow-lg w-full h-96 object-cover"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent to-black opacity-20 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Description -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Product Overview</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            {product.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover the powerful capabilities that make {product.name} the perfect solution for your business.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {product.features.map((feature) => (
+            <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class={`w-12 h-12 ${currentColors.primary} rounded-lg flex items-center justify-center mb-4`}>
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
+              <p class="text-gray-600">
+                Advanced capabilities designed to streamline your workflow and enhance productivity.
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <div class="mb-8 lg:mb-0">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose {product.name}?</h2>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class={`w-8 h-8 ${currentColors.primary} rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0`}>
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">Scalable Solution</h3>
+                  <p class="text-gray-600">Grows with your business needs, from startup to enterprise scale.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class={`w-8 h-8 ${currentColors.primary} rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0`}>
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">Expert Support</h3>
+                  <p class="text-gray-600">24/7 customer support from our team of technical experts.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class={`w-8 h-8 ${currentColors.primary} rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0`}>
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">Easy Integration</h3>
+                  <p class="text-gray-600">Seamlessly integrates with your existing tools and workflows.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="bg-gray-100 rounded-lg p-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+              <p class="text-gray-600 mb-6">
+                Contact our team to learn more about {product.name} and how it can transform your business operations.
+              </p>
+              <div class="space-y-3">
+                <a 
+                  href="/contact"
+                  class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center w-full justify-center`}
+                >
+                  Request Demo
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a 
+                  href="/contact"
+                  class="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 inline-flex items-center w-full justify-center"
+                >
+                  Get Pricing
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore More Solutions</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover other products that can complement {product.name} and enhance your business capabilities.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <a 
+            href="/products"
+            class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center`}
+          >
+            View All Products
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

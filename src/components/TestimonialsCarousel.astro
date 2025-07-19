@@ -1,0 +1,174 @@
+---
+import { siteConfig } from '../config/site.js';
+
+const { testimonials, theme, colors } = siteConfig;
+const currentColors = colors[theme.primary as keyof typeof colors];
+---
+
+<section class="py-16 bg-white" id="testimonials">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        What Our Clients Say
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+      </p>
+    </div>
+    
+    <div class="relative">
+      <!-- Testimonials Container -->
+      <div class="testimonials-container overflow-hidden">
+        <div class="testimonials-track flex transition-transform duration-500 ease-in-out">
+          {testimonials.map((testimonial, index) => (
+            <div class="testimonial-slide flex-shrink-0 w-full px-4">
+              <div class="bg-gray-50 rounded-lg p-8 md:p-12 max-w-4xl mx-auto">
+                <!-- Stars -->
+                <div class="flex justify-center mb-6">
+                  {Array.from({ length: testimonial.rating }, (_, i) => (
+                    <svg class={`w-5 h-5 ${currentColors.text} mr-1`} fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                
+                <!-- Quote -->
+                <blockquote class="text-xl md:text-2xl text-gray-900 font-medium text-center mb-8 leading-relaxed">
+                  "{testimonial.content}"
+                </blockquote>
+                
+                <!-- Author -->
+                <div class="flex items-center justify-center">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    class="w-16 h-16 rounded-full object-cover mr-4"
+                    loading="lazy"
+                  />
+                  <div class="text-center">
+                    <div class="font-semibold text-gray-900 text-lg">{testimonial.name}</div>
+                    <div class="text-gray-600">{testimonial.title}</div>
+                    <div class="text-gray-500 text-sm">{testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <!-- Navigation Arrows -->
+      <button 
+        class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200 z-10"
+        aria-label="Previous testimonial"
+      >
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button 
+        class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200 z-10"
+        aria-label="Next testimonial"
+      >
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      
+      <!-- Dots Indicator -->
+      <div class="flex justify-center mt-8 space-x-2">
+        {testimonials.map((_, index) => (
+          <button 
+            class={`carousel-dot w-3 h-3 rounded-full transition-all duration-200 ${
+              index === 0 ? currentColors.primary : 'bg-gray-300'
+            }`}
+            data-index={index}
+            aria-label={`Go to testimonial ${index + 1}`}
+          ></button>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ currentColors }}>
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.testimonials-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    if (!track || !slides.length) return;
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    function updateCarousel() {
+      // Update track position
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.className = `carousel-dot w-3 h-3 rounded-full transition-all duration-200 ${currentColors.primary}`;
+        } else {
+          dot.className = 'carousel-dot w-3 h-3 rounded-full transition-all duration-200 bg-gray-300';
+        }
+      });
+    }
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }
+    
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+    
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+    
+    // Event listeners
+    if (nextButton) {
+      nextButton.addEventListener('click', nextSlide);
+    }
+    
+    if (prevButton) {
+      prevButton.addEventListener('click', prevSlide);
+    }
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Auto-play carousel
+    let autoPlayInterval = setInterval(nextSlide, 5000);
+    
+    // Pause auto-play on hover
+    const carousel = document.querySelector('#testimonials');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoPlayInterval);
+      });
+      
+      carousel.addEventListener('mouseleave', () => {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+      });
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+    });
+  });
+</script>

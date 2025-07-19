@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config/site.js';
+
+const { about, theme, colors, site } = siteConfig;
+const currentColors = colors[theme.primary as keyof typeof colors];
+---
+
+<Layout title="About Us" description="Learn more about our company, mission, and the team behind our innovative solutions.">
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            {about.title}
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            {about.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <div class="mb-8 lg:mb-0">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              {about.story}
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Since our inception, we've been committed to pushing the boundaries of what's possible in technology. 
+              Our team of experts brings together diverse backgrounds and expertise to create solutions that not only 
+              meet today's challenges but anticipate tomorrow's opportunities.
+            </p>
+            <a 
+              href="/contact"
+              class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center`}
+            >
+              Get in Touch
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+          <div class="relative">
+            <img 
+              src={about.image} 
+              alt="Our team at work"
+              class="rounded-lg shadow-lg w-full h-96 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent to-black opacity-20 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            These metrics reflect our commitment to excellence and the trust our clients place in us.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {about.stats.map((stat) => (
+            <div class="text-center">
+              <div class={`text-4xl md:text-5xl font-bold ${currentColors.text} mb-2`}>
+                {stat.number}
+              </div>
+              <div class="text-gray-600 font-medium uppercase tracking-wide">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            These principles guide everything we do and shape how we interact with our clients, 
+            partners, and each other.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-12">
+          {about.values.map((value, index) => (
+            <div class="text-center">
+              <div class={`w-20 h-20 ${currentColors.primary} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                {index === 0 && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                )}
+                {index === 1 && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {index === 2 && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+              <p class="text-gray-600 leading-relaxed">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              To empower businesses with innovative technology solutions that drive growth, 
+              efficiency, and success in an ever-evolving digital landscape. We believe that 
+              technology should be accessible, reliable, and transformative for organizations 
+              of all sizes.
+            </p>
+          </div>
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              To be the leading technology partner that businesses trust to navigate their 
+              digital transformation journey. We envision a future where technology seamlessly 
+              integrates with business processes to create unprecedented value and opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Work Together?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          We'd love to hear about your project and discuss how we can help you achieve your goals.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact"
+            class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center`}
+          >
+            Start a Conversation
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a 
+            href="/products"
+            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 inline-flex items-center justify-center"
+          >
+            View Our Solutions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

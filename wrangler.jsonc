@@ -1,0 +1,9 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    // Add the name of the project
+    "name": "generic-sme-landing-page",
+    "compatibility_date": "2025-03-25",
+    "assets": {
+      "directory": "./dist"
+    }
+  }

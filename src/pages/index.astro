@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ClientMarquee from '../components/ClientMarquee.astro';
+import TestimonialsCarousel from '../components/TestimonialsCarousel.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config/site.js';
+
+const { about, theme, colors } = siteConfig;
+const currentColors = colors[theme.primary as keyof typeof colors];
+---
+
+<Layout title="Home">
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <Hero />
+    
+    <!-- Client Marquee -->
+    <ClientMarquee />
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <!-- Text Content -->
+          <div class="mb-8 lg:mb-0">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {about.title}
+            </h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              {about.description}
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              {about.story}
+            </p>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-6">
+              {about.stats.map((stat) => (
+                <div class="text-center">
+                  <div class={`text-3xl font-bold ${currentColors.text} mb-2`}>
+                    {stat.number}
+                  </div>
+                  <div class="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Image -->
+          <div class="relative">
+            <img 
+              src={about.image} 
+              alt="About our company"
+              class="rounded-lg shadow-lg w-full h-96 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent to-black opacity-20 rounded-lg"></div>
+          </div>
+        </div>
+        
+        <!-- Values -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold text-gray-900 text-center mb-12">Our Core Values</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            {about.values.map((value) => (
+              <div class="text-center">
+                <div class={`w-16 h-16 ${currentColors.primary} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-900 mb-2">{value.title}</h4>
+                <p class="text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <TestimonialsCarousel />
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your Business?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Join hundreds of companies that trust us to deliver exceptional results. 
+          Let's discuss how we can help you achieve your goals.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact"
+            class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center`}
+          >
+            Get Started Today
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a 
+            href="/products"
+            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 inline-flex items-center justify-center"
+          >
+            View Our Solutions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

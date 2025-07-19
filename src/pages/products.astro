@@ -1,0 +1,208 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config/site.js';
+
+const { products, theme, colors } = siteConfig;
+const currentColors = colors[theme.primary as keyof typeof colors];
+
+// Get unique categories
+const categories = [...new Set(products.map(product => product.category))];
+---
+
+<Layout title="Our Products" description="Explore our comprehensive suite of business solutions designed to transform your operations and drive growth.">
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Product Suite
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover our comprehensive range of solutions designed to empower your business 
+            and drive digital transformation across every aspect of your operations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-4">
+          <button 
+            class={`filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${currentColors.primary} text-white`}
+            data-filter="all"
+          >
+            All Products
+          </button>
+          {categories.map((category) => (
+            <button 
+              class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-200 text-gray-700 hover:bg-gray-300"
+              data-filter={category.toLowerCase()}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+          {products.map((product) => (
+            <div class={`product-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2`} data-category={product.category.toLowerCase()}>
+              <!-- Product Image -->
+              <div class="relative h-64 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class={`${currentColors.primary} text-white px-3 py-1 rounded-full text-xs font-medium`}>
+                    {product.category}
+                  </span>
+                </div>
+              </div>
+              
+              <!-- Product Content -->
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  {product.name}
+                </h3>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  {product.shortDescription}
+                </p>
+                
+                <!-- Features Preview -->
+                <div class="mb-4">
+                  <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    {product.features.slice(0, 3).map((feature) => (
+                      <li class="flex items-center">
+                        <svg class={`w-4 h-4 ${currentColors.text} mr-2 flex-shrink-0`} fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                    {product.features.length > 3 && (
+                      <li class="text-gray-500 text-xs">
+                        +{product.features.length - 3} more features
+                      </li>
+                    )}
+                  </ul>
+                </div>
+                
+                <!-- Price -->
+                <div class="mb-6">
+                  <span class="text-2xl font-bold text-gray-900">{product.price}</span>
+                </div>
+                
+                <!-- Actions -->
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a 
+                    href={`/products/${product.slug}`}
+                    class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-center flex-1`}
+                  >
+                    Learn More
+                  </a>
+                  <a 
+                    href="/contact"
+                    class="border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 text-center flex-1"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          Can't Find What You're Looking For?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          We specialize in creating custom solutions tailored to your unique business needs. 
+          Let's discuss how we can build something perfect for you.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact"
+            class={`${currentColors.primary} ${currentColors.primaryHover} text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center`}
+          >
+            Request Custom Solution
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a 
+            href="/about"
+            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:border-gray-400 hover:bg-gray-50 inline-flex items-center justify-center"
+          >
+            Learn About Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script define:vars={{ currentColors }}>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Update button styles
+        filterButtons.forEach(btn => {
+          if (btn === this) {
+            btn.className = `filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${currentColors.primary} text-white`;
+          } else {
+            btn.className = 'filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-200 text-gray-700 hover:bg-gray-300';
+          }
+        });
+        
+        // Filter products
+        productCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease-in';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

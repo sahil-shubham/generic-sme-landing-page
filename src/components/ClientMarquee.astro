@@ -1,0 +1,107 @@
+---
+import { siteConfig } from '../config/site.js';
+
+const { clients } = siteConfig;
+---
+
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8">
+      <h2 class="text-sm font-semibold text-gray-600 uppercase tracking-wide">
+        Trusted by Leading Companies
+      </h2>
+    </div>
+    
+    <!-- Marquee Container -->
+    <div class="relative overflow-hidden">
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          {clients.map((client) => (
+            <div class="client-logo-item">
+              <img 
+                src={client.logo} 
+                alt={client.alt}
+                class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                loading="lazy"
+              />
+            </div>
+          ))}
+          
+          <!-- Duplicate logos for seamless loop -->
+          {clients.map((client) => (
+            <div class="client-logo-item">
+              <img 
+                src={client.logo} 
+                alt={client.alt}
+                class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 10%,
+      white 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 10%,
+      white 90%,
+      transparent
+    );
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    width: fit-content;
+  }
+  
+  .client-logo-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    min-width: 200px;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Pause animation on hover */
+  .marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .client-logo-item {
+      min-width: 150px;
+      padding: 0 1rem;
+    }
+    
+    .marquee-content {
+      animation-duration: 20s;
+    }
+  }
+</style>
