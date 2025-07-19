@@ -1,15 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T15:40:03.378Z
+// Generated Site Configuration for Chemicals and Pharmaceuticals Sector
+// Auto-generated on 2025-07-19T15:38:45.069Z
 
 export const siteConfig = {
   "site": {
-    "name": "Heritage Textiles",
-    "title": "Premium Textiles & Garment Manufacturing",
-    "description": "Traditional craftsmanship meets modern technology in our premium textile and garment manufacturing for domestic and export markets",
+    "name": "ChemPharma Industries",
+    "title": "Quality Chemicals & Pharmaceutical Solutions",
+    "description": "Manufacturing high-quality chemicals and pharmaceutical products with stringent quality controls and regulatory compliance",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "textiles, garments, fabric manufacturing, cotton, silk, export, fashion, traditional wear"
+    "keywords": "chemicals, pharmaceuticals, API, drug manufacturing, specialty chemicals, research, quality control"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -29,9 +29,9 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "orange",
-    "style": "classic",
-    "layout": "wide"
+    "primary": "blue",
+    "style": "professional",
+    "layout": "centered"
   },
   "colors": {
     "blue": {
@@ -67,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -79,12 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Weaving India's Textile Legacy",
-    "subtitle": "From traditional handlooms to modern manufacturing facilities, we create premium quality textiles and garments that showcase India's rich heritage while meeting global standards",
-    "ctaText": "View Collections",
+    "title": "Advancing Healthcare Through Chemistry",
+    "subtitle": "Our state-of-the-art manufacturing facilities produce premium chemicals and pharmaceutical products that meet global quality standards and contribute to better health outcomes",
+    "ctaText": "View Products",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "overlayOpacity": "bg-opacity-40"
+    "backgroundImage": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-60"
   },
   "clients": [
     {
@@ -149,55 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "Premium Cotton Fabrics",
-      "slug": "premium-cotton-fabrics",
-      "shortDescription": "100% pure cotton fabrics in various weaves",
-      "description": "High-quality cotton fabrics sourced from the finest cotton growing regions of India. Available in various weaves, weights, and finishes for apparel and home textiles.",
-      "price": "₹150 - ₹800 per meter",
-      "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Active Pharmaceutical Ingredients",
+      "slug": "active-pharmaceutical-ingredients",
+      "shortDescription": "High-purity APIs for drug manufacturing",
+      "description": "Premium quality Active Pharmaceutical Ingredients manufactured under cGMP conditions with complete documentation and regulatory support for generic drug manufacturers.",
+      "price": "₹2,000 - ₹50,000 per kg",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "100% pure cotton",
-        "GOTS certified",
-        "Colorfast dyes",
-        "Multiple weights",
-        "Custom prints",
-        "Export quality"
+        "cGMP certified",
+        "DMF support",
+        "Analytical testing",
+        "Regulatory documentation",
+        "Custom synthesis",
+        "Scale-up support"
       ],
-      "category": "Cotton Textiles"
+      "category": "APIs"
     },
     {
-      "name": "Traditional Silk Sarees",
-      "slug": "traditional-silk-sarees",
-      "shortDescription": "Handwoven silk sarees with traditional motifs",
-      "description": "Exquisite handwoven silk sarees featuring traditional Indian motifs and designs. Each piece represents hours of skilled craftsmanship by master weavers.",
-      "price": "₹5,000 - ₹75,000",
-      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Specialty Chemical Solutions",
+      "slug": "specialty-chemical-solutions",
+      "shortDescription": "Custom chemicals for industrial applications",
+      "description": "Specialized chemical solutions for various industries including agrochemicals, dyes, and industrial intermediates with custom synthesis capabilities.",
+      "price": "₹500 - ₹20,000 per kg",
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Pure silk",
-        "Handwoven",
-        "Traditional motifs",
-        "Natural dyes",
-        "GI tagged",
-        "Artisan crafted"
+        "Custom synthesis",
+        "Pilot scale",
+        "Process optimization",
+        "Quality assurance",
+        "Technical support",
+        "Regulatory compliance"
       ],
-      "category": "Silk Products"
+      "category": "Specialty Chemicals"
     },
     {
-      "name": "Ready-to-Wear Garments",
-      "slug": "ready-to-wear-garments",
-      "shortDescription": "Contemporary fashion for domestic and export",
-      "description": "Modern ready-to-wear clothing line combining contemporary designs with traditional Indian elements. Manufactured to international quality standards.",
-      "price": "₹500 - ₹5,000",
-      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Quality Control Services",
+      "slug": "quality-control-services",
+      "shortDescription": "Comprehensive analytical testing services",
+      "description": "Full-service analytical laboratory providing comprehensive testing services for pharmaceuticals, chemicals, and related products with NABL accreditation.",
+      "price": "₹1,000 - ₹25,000 per test",
+      "image": "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Contemporary designs",
-        "Quality stitching",
-        "Size range S-XXXL",
-        "Color variants",
-        "Export quality",
-        "Sustainable fabrics"
+        "NABL accredited",
+        "Method development",
+        "Validation studies",
+        "Stability testing",
+        "Impurity profiling",
+        "Regulatory support"
       ],
-      "category": "Garments"
+      "category": "Testing Services"
     }
   ],
   "about": {
@@ -257,19 +256,71 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Custom Fabric Development",
-    "Private Label Manufacturing",
-    "Design & Pattern Making",
-    "Quality Testing & Certification",
-    "Export Documentation",
-    "Logistics & Shipping"
+    "Contract Manufacturing",
+    "Process Development",
+    "Regulatory Consulting",
+    "Quality Assurance",
+    "Custom Synthesis",
+    "Analytical Method Development"
   ],
   "certifications": [
-    "GOTS Certified",
-    "OEKO-TEX Standard",
-    "WRAP Certification",
-    "BCI Member",
-    "ISO 9001:2015"
+    "WHO-GMP",
+    "US FDA",
+    "EU GMP",
+    "ISO 9001:2015",
+    "NABL Accredited",
+    "DSIR Recognized"
   ],
-  "sector": "Textiles and Garments"
+  "sector": "Chemicals and Pharmaceuticals",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Quality and compliance leader",
+    "differentiators": [
+      "Regulatory compliance",
+      "Quality systems",
+      "R&D capabilities"
+    ],
+    "competitiveAdvantage": "World-class quality systems meeting global regulatory standards"
+  },
+  "contentStrategy": {
+    "tone": "Scientific, precise, trustworthy",
+    "messaging": [
+      "Quality is our commitment",
+      "Excellence in every detail",
+      "Uncompromising quality standards",
+      "Precision and perfection"
+    ],
+    "visualStyle": {
+      "primary": "factory, machinery, industrial environment",
+      "secondary": "workers, precision, modern equipment",
+      "style": "professional, clean, technical"
+    }
+  },
+  "seo": {
+    "localKeywords": [
+      "chemicals pharmaceuticals India",
+      "chemicals pharmaceuticals manufacturer India",
+      "chemicals pharmaceuticals supplier Mumbai",
+      "chemicals pharmaceuticals company Delhi",
+      "Indian chemicals pharmaceuticals",
+      "best chemicals pharmaceuticals India",
+      "chemicals pharmaceuticals services India"
+    ],
+    "industryTerms": [
+      "pharmaceutical manufacturing",
+      "chemical industry",
+      "API manufacturing",
+      "drug development"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

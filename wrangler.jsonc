@@ -1,9 +1,17 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
-    // Add the name of the project
-    "name": "generic-sme-landing-page",
+    "name": "sme-website-template",
     "compatibility_date": "2025-03-25",
     "assets": {
       "directory": "./dist"
-    }
-  }
+    },
+    "env": {
+      "preview": {
+        "name": "sme-website-template-preview"
+      },
+      "production": {
+        "name": "sme-website-template-prod"
+      }
+    },
+    "pages_build_output_dir": "./dist"
+}

@@ -1,352 +1,322 @@
-# Configurable SME Landing Page Template
+# Comprehensive SME Website Template for India
 
-A modern, responsive, and highly configurable Astro template designed for small-medium enterprises (SMEs). Built with Tailwind CSS and optimized for easy customization via LLM.
+A highly sophisticated, sector-specific website template designed for Small and Medium Enterprises (SMEs) across India. This template provides industry-tailored configurations for 7 major sectors with comprehensive customization options and modern deployment capabilities.
 
-## 🚀 Quick Start
+## 🚀 Quick Start with Bun
 
 ```bash
+# Install Bun (if not already installed)
+curl -fsSL https://bun.sh/install | bash
+
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 
-# Preview production build
-npm run preview
+# Deploy to Cloudflare Pages
+bun run deploy
 ```
 
-## 📁 Project Structure
+## 🏭 Supported Industry Sectors
+
+This template includes pre-configured setups for:
+
+### 1. **Industrial Machinery & Equipment**
+- CNC machines, automation systems, material handling
+- B2B focus with technical specifications
+- Professional blue theme, engineering-focused content
+
+### 2. **Electronics & Electrical Goods**
+- Biometric systems, photocopiers, LED lighting, IoT sensors
+- Technology-forward design with purple theme
+- Innovation and reliability messaging
+
+### 3. **Textiles and Garments**
+- Cotton fabrics, silk sarees, ready-to-wear garments
+- Traditional yet modern orange theme
+- Heritage craftsmanship with export quality
+
+### 4. **Agriculture & Agro Products**
+- Precision agriculture, organic processing, farm equipment
+- Growth-oriented green theme
+- Sustainability and farmer-centric approach
+
+### 5. **Chemicals and Pharmaceuticals**
+- APIs, specialty chemicals, quality control services
+- Professional blue theme with regulatory focus
+- Scientific precision and compliance messaging
+
+### 6. **Consumer Goods and Household Products**
+- Kitchen appliances, home care, personal care
+- Friendly pink theme with family appeal
+- Value and convenience positioning
+
+### 7. **Construction Materials and Hardware**
+- Steel, cement, construction tools
+- Bold red theme emphasizing strength
+- Durability and infrastructure focus
+
+## 📁 Enhanced Project Structure
 
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── Navbar.astro    # Navigation bar with responsive design
-│   ├── Hero.astro      # Hero section with background image
-│   ├── ClientMarquee.astro  # Animated client logos
+│   ├── Navbar.astro    # Responsive navigation
+│   ├── Hero.astro      # Industry-specific hero sections
+│   ├── ClientMarquee.astro  # Client logos display
 │   ├── TestimonialsCarousel.astro  # Customer testimonials
-│   └── Footer.astro    # Site footer with contact info
+│   └── Footer.astro    # Contact and company info
 ├── config/
-│   └── site.js         # Main configuration file
+│   ├── site.js         # Base configuration
+│   └── sectors.js      # Comprehensive sector configurations
 ├── layouts/
-│   └── Layout.astro    # Base layout with SEO meta tags
+│   └── Layout.astro    # SEO-optimized base layout
 ├── pages/
-│   ├── index.astro     # Landing page
+│   ├── index.astro     # Dynamic landing page
 │   ├── about.astro     # About us page
-│   ├── products.astro  # Products listing
-│   ├── contact.astro   # Contact form and info
+│   ├── products.astro  # Products with filtering
+│   ├── contact.astro   # Contact form
 │   └── products/
 │       └── [slug].astro # Dynamic product pages
 └── styles/
     └── global.css      # Global Tailwind CSS styles
+
+scripts/
+├── customize.js        # Enhanced customization utility
+└── generate-sector-configs.js  # Sector configuration generator
+
+generated-configs/      # Auto-generated sector configurations
+├── sector-comparison-matrix.js
+├── llm-prompts.js
+└── [sector]-config.js  # Individual sector configs
 ```
 
-## 🎨 Configuration Guide
+## 🎯 Smart Configuration System
 
-### Primary Configuration File: `src/config/site.js`
-
-This is the main file for customizing your site. All content, styling, and behavior can be modified here.
-
-#### Basic Site Information
-```javascript
-site: {
-  name: "YourCompany",
-  title: "Professional Business Solutions", 
-  description: "We provide innovative solutions for modern businesses",
-  url: "https://yourcompany.com",
-  logo: "/logo.png",
-  favicon: "/favicon.ico"
-}
-```
-
-#### Theme Configuration
-```javascript
-theme: {
-  primary: "blue",     // Options: blue, green, purple, red, orange, pink
-  style: "modern",     // Options: modern, classic, minimal, bold
-  layout: "centered",  // Options: centered, wide, compact
-}
-```
-
-#### Hero Section
-```javascript
-hero: {
-  title: "Transform Your Business with Our Solutions",
-  subtitle: "We deliver innovative, scalable solutions...",
-  ctaText: "Explore Our Products",
-  ctaLink: "/products",
-  backgroundImage: "https://images.unsplash.com/...",
-  overlayOpacity: "bg-opacity-50" // bg-opacity-30, bg-opacity-50, bg-opacity-70
-}
-```
-
-## 🎯 Key Features
-
-### 1. Responsive Design
-- Mobile-first approach
-- Optimized for all screen sizes
-- Touch-friendly interactions
-
-### 2. SEO Optimized
-- Meta tags in `Layout.astro`
-- Open Graph support
-- Twitter Card support
-- Structured data ready
-
-### 3. Performance Focused
-- Lazy loading images
-- Optimized animations
-- Fast Tailwind CSS
-- Minimal JavaScript
-
-### 4. Accessibility
-- ARIA labels
-- Keyboard navigation
-- Screen reader friendly
-- High contrast support
-
-## 🛠 Customization Instructions
-
-### Changing Color Schemes
-
-Update the `theme.primary` in `src/config/site.js`:
-
-```javascript
-theme: {
-  primary: "green", // Changes entire site color scheme
-}
-```
-
-Available colors: blue, green, purple, red, orange, pink
-
-### Adding New Products
-
-Add to the `products` array in `src/config/site.js`:
-
-```javascript
-{
-  id: 4,
-  name: "New Product Name",
-  slug: "new-product-name",
-  shortDescription: "Brief description",
-  description: "Detailed description",
-  price: "Starting at $299/month", 
-  image: "https://images.unsplash.com/...",
-  features: ["Feature 1", "Feature 2", "Feature 3"],
-  category: "New Category"
-}
-```
-
-### Updating Client Logos
-
-Modify the `clients` array in `src/config/site.js`:
-
-```javascript
-{
-  name: "Client Name",
-  logo: "https://images.unsplash.com/...",
-  alt: "Client Name Logo"
-}
-```
-
-### Customizing Testimonials
-
-Update the `testimonials` array:
-
-```javascript
-{
-  id: 4,
-  name: "Customer Name",
-  title: "Position",
-  company: "Company Name",
-  image: "https://images.unsplash.com/...",
-  content: "Testimonial content...",
-  rating: 5
-}
-```
-
-## 🖼 Image Guidelines
-
-### Using Unsplash Images
-All sample images use Unsplash with optimized parameters:
-- Format: `https://images.unsplash.com/photo-[ID]?ixlib=rb-4.0.3&auto=format&fit=crop&w=[WIDTH]&q=80`
-- Replace `[ID]` with Unsplash photo ID
-- Replace `[WIDTH]` with desired width
-
-### Image Sizes
-- **Hero Background**: 2070x1380px (3:2 ratio)
-- **Product Images**: 800x600px (4:3 ratio)  
-- **Client Logos**: 200x100px (2:1 ratio)
-- **Testimonial Photos**: 400x400px (1:1 ratio)
-- **About Page Images**: 800x600px (4:3 ratio)
-
-## 📱 Component Documentation
-
-### Navbar Component
-- Responsive navigation with mobile hamburger menu
-- Active page highlighting
-- Sticky positioning
-- CTA button included
-
-### Hero Component  
-- Full-screen background image with overlay
-- Configurable opacity
-- Responsive text sizing
-- Animated scroll indicator
-
-### ClientMarquee Component
-- Infinite scroll animation
-- Hover to pause
-- Responsive logo sizing
-- Smooth transitions
-
-### TestimonialsCarousel Component
-- Auto-playing carousel
-- Navigation arrows and dots
-- Touch/swipe support
-- Keyboard navigation
-- Pause on hover
-
-### Footer Component
-- Contact information
-- Social media links
-- Navigation links
-- Copyright notice
-
-## 🚀 Deployment
-
-### Build Commands
+### Quick Sector Switch
 ```bash
-# Build for production
-npm run build
+# List available sectors
+bun run customize list-sectors
 
-# Preview build locally  
-npm run preview
+# Switch to a specific sector
+bun run customize sector industrial_machinery
+bun run customize sector electronics_electrical
+bun run customize sector textiles_garments
 ```
 
-### Deployment Platforms
-- **Netlify**: Connect GitHub repo for auto-deploy
-- **Vercel**: Import project for instant deployment
-- **GitHub Pages**: Use GitHub Actions workflow
-- **Static Hosting**: Upload `dist/` folder contents
+### Easy Customization
+```bash
+# Change color scheme
+bun run customize color blue
 
-## 🔧 LLM Customization Guide
+# Update company information
+bun run customize company --name "YourCompany" --title "Your Business Solutions"
 
-### For AI Assistants:
+# View current configuration
+bun run customize status
 
-1. **Primary customization location**: `src/config/site.js`
-2. **Key areas to modify**:
-   - Company information
-   - Product details
-   - Contact information
-   - Color themes
-   - Content text
+# Generate all sector configurations
+bun run generate:sectors
+```
 
-3. **Image replacement**: Update URLs in config file
-4. **New pages**: Follow existing pattern in `src/pages/`
-5. **Styling**: Modify Tailwind classes in components
+## 🎨 Advanced Theming
 
-### Common Customization Tasks:
+### Available Color Schemes
+- **Blue**: Professional and trustworthy
+- **Green**: Natural and growth-oriented  
+- **Purple**: Creative and innovative
+- **Red**: Bold and energetic
+- **Orange**: Warm and approachable
+- **Pink**: Modern and friendly
+- **Indigo**: Deep and sophisticated
+- **Teal**: Fresh and modern
 
-#### Task 1: Change Company Information
-Edit `site` object in `src/config/site.js`
+### Sector-Specific Styling
+Each sector includes:
+- Industry-appropriate color palettes
+- Contextual imagery guidelines
+- Sector-specific messaging frameworks
+- Target audience definitions
+- Competitive positioning strategies
 
-#### Task 2: Update Color Scheme  
-Change `theme.primary` value
+## 📊 Configuration Examples
 
-#### Task 3: Add New Product
-Add object to `products` array
+### Industrial Machinery Company
+```bash
+bun run customize sector industrial_machinery
+bun run customize color blue
+bun run customize company \
+  --name "IndoMach Solutions" \
+  --title "Industrial Machinery Specialists" \
+  --email "sales@indomach.com" \
+  --phone "+91-22-4567-8900"
+```
 
-#### Task 4: Modify Hero Section
-Update `hero` object properties
+### Textile Export Business
+```bash
+bun run customize sector textiles_garments
+bun run customize color orange
+bun run customize company \
+  --name "Heritage Textiles" \
+  --title "Premium Textile Manufacturing" \
+  --email "exports@heritagetextiles.com" \
+  --phone "+91-80-9876-5432"
+```
 
-#### Task 5: Change Contact Details
-Edit `contact` object
+## 🚀 Deployment Options
 
-## 📋 Task Management
+### Cloudflare Pages (Recommended)
+```bash
+# Build and deploy to production
+bun run deploy
 
-### ✅ Completed Features
-- [x] Responsive navigation bar
-- [x] Hero section with background image
-- [x] Client logos marquee  
-- [x] Testimonials carousel
-- [x] About us page
-- [x] Products listing with filtering
-- [x] Individual product pages
-- [x] Contact form with validation
-- [x] Footer with contact info
-- [x] SEO optimization
-- [x] Accessibility features
-- [x] Mobile responsiveness
+# Deploy to preview environment
+bun run deploy:preview
+```
 
-### 🔄 Ready for Customization
-- [ ] Replace placeholder logo with actual logo
-- [ ] Update company information
-- [ ] Add real product images
-- [ ] Customize color scheme
-- [ ] Add actual client logos
-- [ ] Update contact form endpoint
-- [ ] Add Google Maps integration
-- [ ] Customize meta descriptions
-- [ ] Add analytics tracking
-- [ ] Set up form submissions
+### Manual Cloudflare Setup
+1. Connect your repository to Cloudflare Pages
+2. Build command: `bun run build`
+3. Output directory: `dist`
+4. Environment variables: Set in Cloudflare dashboard
 
-### 🚀 Enhancement Ideas
-- [ ] Add blog section
-- [ ] Implement search functionality  
-- [ ] Add multi-language support
-- [ ] Create admin dashboard
-- [ ] Add e-commerce features
-- [ ] Implement user authentication
-- [ ] Add live chat widget
-- [ ] Create mobile app
-- [ ] Add video backgrounds
-- [ ] Implement dark mode
+### Alternative Platforms
+- **Netlify**: Auto-detects Astro, zero configuration
+- **Vercel**: Import from GitHub, automatic deployment
+- **GitHub Pages**: Use provided workflow in `.github/workflows/`
 
-## 🎨 Theme Variations
+## 🔧 Customization for LLMs
 
-### Available Themes
-1. **Modern** (default): Clean, contemporary design
-2. **Classic**: Traditional, professional layout
-3. **Minimal**: Simple, focused design
-4. **Bold**: High-contrast, impactful styling
+### Sector-Specific Prompts
+The template generates LLM-friendly prompts for each sector:
 
-### Layout Options
-1. **Centered**: Content centered with max-width
-2. **Wide**: Full-width layouts
-3. **Compact**: Tighter spacing and smaller elements
+```javascript
+// Example: Electronics sector customization prompt
+"You are customizing a website for an Electronics & Electrical Goods company in India.
+Target Audience: Business professionals, decision makers, technical experts
+Market Position: Innovation leader
+Tone: Modern, innovative, reliable
+Focus on 4 main product categories with comprehensive support services."
+```
 
-## 📞 Support & Documentation
+### Content Strategy Guidelines
+Each sector includes:
+- **Business Context**: B2B vs B2C focus
+- **Target Audience**: Specific buyer personas
+- **Messaging Framework**: Key value propositions
+- **Visual Style**: Industry-appropriate imagery
+- **SEO Strategy**: Local and industry keywords
 
-### File Structure Reference
-- **Components**: Reusable UI elements
-- **Pages**: Route-based page files
-- **Layouts**: Wrapper components for pages
-- **Config**: Site configuration and data
-- **Styles**: Global CSS and styling
+## 📈 Advanced Features
+
+### Indian Market Focus
+- **Pricing**: Indian Rupee (₹) format
+- **Certifications**: BIS, ISI, FSSAI, ISO standards
+- **Locations**: Major Indian cities and regions
+- **Language**: English with regional considerations
+- **Business Culture**: Local business practices
+
+### SEO Optimization
+- Industry-specific meta tags
+- Local keyword optimization
+- Schema markup for Indian businesses
+- Mobile-first responsive design
+- Fast loading times
+
+### Analytics Ready
+- Google Analytics integration
+- Conversion tracking setup
+- Performance monitoring
+- User behavior analysis
+
+## 🛠 Development Tools
+
+### Bun-Powered Development
+- **Fast**: 10x faster than npm
+- **Modern**: Built-in TypeScript support
+- **Simple**: Single runtime for everything
+
+### Quality Assurance
+- Automated testing setup
+- Code formatting with Prettier
+- ESLint configuration
+- Performance monitoring
+
+## 📋 LLM Integration Guide
+
+### For AI Assistants
+
+**Primary customization approach:**
+1. Run `bun run customize list-sectors` to see options
+2. Use `bun run customize sector <sector-key>` for industry setup
+3. Customize with `bun run customize company` for basic info
+4. Fine-tune colors with `bun run customize color <color>`
+5. Review with `bun run customize status`
+
+**Key configuration locations:**
+- `src/config/site.js` - Main configuration
+- `src/config/sectors.js` - Industry-specific settings
+- `generated-configs/` - AI-friendly prompts and examples
+
+### Content Customization Tasks
+
+1. **Company Branding**: Update logos, colors, company information
+2. **Product Catalog**: Add/modify products with Indian pricing
+3. **Services Portfolio**: Customize service offerings
+4. **Contact Information**: Local phone numbers and addresses
+5. **Certifications**: Add relevant Indian certifications
+6. **Client References**: Include Indian companies and testimonials
+
+## 🌟 Template Highlights
+
+### Industry Expertise
+- **7 Major Sectors**: Comprehensive coverage of Indian SME landscape
+- **Cultural Relevance**: Designed for Indian business environment
+- **Regulatory Awareness**: Includes relevant certifications and standards
+
+### Technical Excellence
+- **Modern Framework**: Astro + Tailwind CSS + Bun
+- **Performance Optimized**: Sub-second loading times
+- **SEO Ready**: Built-in optimization for Indian markets
+- **Mobile First**: Responsive design for all devices
+
+### Business Value
+- **Quick Setup**: Operational website in minutes
+- **Professional Design**: Enterprise-grade appearance
+- **Scalable Architecture**: Grows with your business
+- **Cost Effective**: Open source with premium features
+
+## 📞 Support & Community
+
+### Getting Help
+1. **Documentation**: Comprehensive guides and examples
+2. **Configuration Tool**: Interactive customization scripts
+3. **Sector Examples**: Real-world industry implementations
+4. **LLM Prompts**: AI-friendly customization guidance
 
 ### Best Practices
-1. Always update `src/config/site.js` for content changes
-2. Use Unsplash URLs for consistent image loading
-3. Maintain aspect ratios for images
-4. Test on mobile devices
-5. Validate forms before deployment
-6. Optimize images for web use
-
-## 🔗 External Dependencies
-
-- **Astro**: Static site generator
-- **Tailwind CSS**: Utility-first CSS framework
-- **Inter Font**: Google Fonts typography
-- **Heroicons**: SVG icon library
-- **Unsplash**: Sample images
+- Start with sector-specific configuration
+- Customize gradually with testing
+- Use Indian business context
+- Optimize for local search
+- Include relevant certifications
 
 ## 📄 License
 
-This template is designed for commercial use. Customize freely for your business needs.
+This template is designed for commercial use by Indian SMEs. Customize freely for your business needs while maintaining attribution to the original template.
 
 ---
 
-**Need help?** This template is designed to be easily customizable by LLMs. Most changes can be made in the `src/config/site.js` file without touching component code.
+**Ready to build your SME website?** 
+
+1. `bun run customize list-sectors` - Choose your industry
+2. `bun run customize sector <your-sector>` - Apply sector configuration  
+3. `bun run customize company --name "YourCompany"` - Add your details
+4. `bun run dev` - Start customizing
+5. `bun run deploy` - Go live on Cloudflare
+
+Transform your business presence with a professional website tailored for Indian SMEs! 🇮🇳

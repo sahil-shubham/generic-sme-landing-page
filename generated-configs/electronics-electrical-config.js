@@ -1,15 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T15:40:03.378Z
+// Generated Site Configuration for Electronics & Electrical Goods Sector
+// Auto-generated on 2025-07-19T15:38:45.068Z
 
 export const siteConfig = {
   "site": {
-    "name": "Heritage Textiles",
-    "title": "Premium Textiles & Garment Manufacturing",
-    "description": "Traditional craftsmanship meets modern technology in our premium textile and garment manufacturing for domestic and export markets",
+    "name": "ElectroTech India",
+    "title": "Advanced Electronics & Electrical Solutions",
+    "description": "Comprehensive range of electronic devices, electrical equipment, and smart technology solutions for businesses and institutions",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "textiles, garments, fabric manufacturing, cotton, silk, export, fashion, traditional wear"
+    "keywords": "electronics, electrical equipment, fingerprint scanners, photocopiers, LED lighting, sensors, automation"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -29,9 +29,9 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "orange",
-    "style": "classic",
-    "layout": "wide"
+    "primary": "purple",
+    "style": "modern",
+    "layout": "centered"
   },
   "colors": {
     "blue": {
@@ -67,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -79,12 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Weaving India's Textile Legacy",
-    "subtitle": "From traditional handlooms to modern manufacturing facilities, we create premium quality textiles and garments that showcase India's rich heritage while meeting global standards",
-    "ctaText": "View Collections",
+    "title": "Smart Electronics for Modern India",
+    "subtitle": "From advanced biometric systems to intelligent lighting solutions, we provide cutting-edge electronic and electrical products that enhance security, efficiency, and productivity",
+    "ctaText": "Explore Products",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "overlayOpacity": "bg-opacity-40"
+    "backgroundImage": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-50"
   },
   "clients": [
     {
@@ -149,55 +148,72 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "Premium Cotton Fabrics",
-      "slug": "premium-cotton-fabrics",
-      "shortDescription": "100% pure cotton fabrics in various weaves",
-      "description": "High-quality cotton fabrics sourced from the finest cotton growing regions of India. Available in various weaves, weights, and finishes for apparel and home textiles.",
-      "price": "₹150 - ₹800 per meter",
-      "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Biometric Fingerprint Scanners",
+      "slug": "biometric-fingerprint-scanners",
+      "shortDescription": "Advanced biometric access control systems",
+      "description": "High-security fingerprint scanning systems with advanced algorithms for accurate identification. Suitable for offices, factories, and government institutions.",
+      "price": "₹15,000 - ₹85,000",
+      "image": "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "100% pure cotton",
-        "GOTS certified",
-        "Colorfast dyes",
-        "Multiple weights",
-        "Custom prints",
-        "Export quality"
+        "99.9% accuracy",
+        "1:N identification",
+        "TCP/IP connectivity",
+        "Anti-spoofing technology",
+        "Weather resistant",
+        "Mobile app integration"
       ],
-      "category": "Cotton Textiles"
+      "category": "Security Systems"
     },
     {
-      "name": "Traditional Silk Sarees",
-      "slug": "traditional-silk-sarees",
-      "shortDescription": "Handwoven silk sarees with traditional motifs",
-      "description": "Exquisite handwoven silk sarees featuring traditional Indian motifs and designs. Each piece represents hours of skilled craftsmanship by master weavers.",
-      "price": "₹5,000 - ₹75,000",
-      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Multifunction Photocopier Machines",
+      "slug": "multifunction-photocopier-machines",
+      "shortDescription": "Professional printing and document solutions",
+      "description": "High-speed multifunction printers with scanning, copying, and network capabilities. Perfect for offices and business centers.",
+      "price": "₹45,000 - ₹3,50,000",
+      "image": "https://images.unsplash.com/photo-1586281010138-8e1b33aa4d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Pure silk",
-        "Handwoven",
-        "Traditional motifs",
-        "Natural dyes",
-        "GI tagged",
-        "Artisan crafted"
+        "High-speed printing",
+        "Duplex scanning",
+        "Network connectivity",
+        "Mobile printing",
+        "Document security",
+        "Cost control"
       ],
-      "category": "Silk Products"
+      "category": "Office Equipment"
     },
     {
-      "name": "Ready-to-Wear Garments",
-      "slug": "ready-to-wear-garments",
-      "shortDescription": "Contemporary fashion for domestic and export",
-      "description": "Modern ready-to-wear clothing line combining contemporary designs with traditional Indian elements. Manufactured to international quality standards.",
-      "price": "₹500 - ₹5,000",
-      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "LED High Mast Lighting",
+      "slug": "led-high-mast-lighting",
+      "shortDescription": "Energy-efficient outdoor lighting solutions",
+      "description": "Professional LED high mast lighting systems for stadiums, parking areas, and industrial complexes with intelligent controls and energy savings.",
+      "price": "₹1,20,000 - ₹8,50,000",
+      "image": "https://images.unsplash.com/photo-1558618666-4c1d51c6c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Contemporary designs",
-        "Quality stitching",
-        "Size range S-XXXL",
-        "Color variants",
-        "Export quality",
-        "Sustainable fabrics"
+        "80% energy savings",
+        "Smart controls",
+        "Weather resistant",
+        "25-year lifespan",
+        "Remote monitoring",
+        "Custom pole heights"
       ],
-      "category": "Garments"
+      "category": "Lighting Solutions"
+    },
+    {
+      "name": "Industrial IoT Sensors",
+      "slug": "industrial-iot-sensors",
+      "shortDescription": "Smart sensors for Industry 4.0 applications",
+      "description": "Advanced wireless sensors for temperature, humidity, pressure, and motion monitoring with cloud connectivity and real-time alerts.",
+      "price": "₹5,000 - ₹45,000",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "features": [
+        "Wireless connectivity",
+        "Cloud integration",
+        "Real-time monitoring",
+        "Mobile alerts",
+        "Long battery life",
+        "Weatherproof design"
+      ],
+      "category": "IoT Solutions"
     }
   ],
   "about": {
@@ -257,19 +273,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Custom Fabric Development",
-    "Private Label Manufacturing",
-    "Design & Pattern Making",
-    "Quality Testing & Certification",
-    "Export Documentation",
-    "Logistics & Shipping"
+    "Installation & Configuration",
+    "Annual Maintenance Contracts",
+    "Technical Support & Training",
+    "Custom Integration Solutions",
+    "Warranty & Repair Services",
+    "System Upgrades"
   ],
   "certifications": [
-    "GOTS Certified",
-    "OEKO-TEX Standard",
-    "WRAP Certification",
-    "BCI Member",
+    "BIS Certification",
+    "RoHS Compliance",
+    "FCC Approved",
+    "CE Marking",
     "ISO 9001:2015"
   ],
-  "sector": "Textiles and Garments"
+  "sector": "Electronics & Electrical Goods",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Innovation leader",
+    "differentiators": [
+      "Cutting-edge technology",
+      "Reliable performance",
+      "Comprehensive support"
+    ],
+    "competitiveAdvantage": "Combining international technology with local market expertise and support"
+  },
+  "contentStrategy": {
+    "tone": "Modern, innovative, reliable",
+    "messaging": [
+      "Innovation drives everything we do",
+      "Leading with technology",
+      "Smart solutions for modern challenges",
+      "Pioneering the future"
+    ],
+    "visualStyle": {
+      "primary": "innovation, digital, modern",
+      "secondary": "efficiency, smart solutions, future",
+      "style": "sleek, modern, high-tech"
+    }
+  },
+  "seo": {
+    "localKeywords": [
+      "electronics electrical India",
+      "electronics electrical manufacturer India",
+      "electronics electrical supplier Mumbai",
+      "electronics electrical company Delhi",
+      "Indian electronics electrical",
+      "best electronics electrical India",
+      "electronics electrical services India"
+    ],
+    "industryTerms": [
+      "biometric systems",
+      "LED lighting",
+      "sensors",
+      "electronic equipment"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

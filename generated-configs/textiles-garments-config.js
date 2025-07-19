@@ -1,5 +1,5 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T15:40:03.378Z
+// Generated Site Configuration for Textiles and Garments Sector
+// Auto-generated on 2025-07-19T15:38:45.068Z
 
 export const siteConfig = {
   "site": {
@@ -67,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -271,5 +270,56 @@ export const siteConfig = {
     "BCI Member",
     "ISO 9001:2015"
   ],
-  "sector": "Textiles and Garments"
+  "sector": "Textiles and Garments",
+  "businessContext": "B2C/B2B",
+  "targetAudience": "End consumers, retailers, distributors",
+  "marketPosition": {
+    "primary": "Heritage with modern excellence",
+    "differentiators": [
+      "Traditional craftsmanship",
+      "Modern quality",
+      "Export excellence"
+    ],
+    "competitiveAdvantage": "Perfect blend of traditional Indian craftsmanship with modern manufacturing excellence"
+  },
+  "contentStrategy": {
+    "tone": "Elegant, traditional, quality-focused",
+    "messaging": [
+      "Customer satisfaction is our priority",
+      "Dedicated support every step",
+      "Your success is our mission",
+      "Partnership beyond products"
+    ],
+    "visualStyle": {
+      "primary": "heritage, craftsmanship, authenticity",
+      "secondary": "tradition, quality, artisan",
+      "style": "classic, elegant, timeless"
+    }
+  },
+  "seo": {
+    "localKeywords": [
+      "textiles garments India",
+      "textiles garments manufacturer India",
+      "textiles garments supplier Mumbai",
+      "textiles garments company Delhi",
+      "Indian textiles garments",
+      "best textiles garments India",
+      "textiles garments services India"
+    ],
+    "industryTerms": [
+      "cotton fabrics",
+      "silk sarees",
+      "garment manufacturing",
+      "textile industry"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

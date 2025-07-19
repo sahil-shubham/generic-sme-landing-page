@@ -1,15 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T15:40:03.378Z
+// Generated Site Configuration for Agriculture & Agro Products Sector
+// Auto-generated on 2025-07-19T15:38:45.068Z
 
 export const siteConfig = {
   "site": {
-    "name": "Heritage Textiles",
-    "title": "Premium Textiles & Garment Manufacturing",
-    "description": "Traditional craftsmanship meets modern technology in our premium textile and garment manufacturing for domestic and export markets",
+    "name": "AgriTech Solutions",
+    "title": "Modern Agriculture & Premium Agro Products",
+    "description": "Sustainable farming solutions and premium agricultural products that nourish communities while supporting farmer prosperity",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "textiles, garments, fabric manufacturing, cotton, silk, export, fashion, traditional wear"
+    "keywords": "agriculture, farming, organic products, agro processing, farm equipment, sustainable farming, food processing"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -29,8 +29,8 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "orange",
-    "style": "classic",
+    "primary": "green",
+    "style": "modern",
     "layout": "wide"
   },
   "colors": {
@@ -67,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -79,12 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Weaving India's Textile Legacy",
-    "subtitle": "From traditional handlooms to modern manufacturing facilities, we create premium quality textiles and garments that showcase India's rich heritage while meeting global standards",
-    "ctaText": "View Collections",
+    "title": "Cultivating India's Agricultural Future",
+    "subtitle": "From innovative farming technologies to premium processed foods, we're committed to sustainable agriculture that benefits farmers, consumers, and the environment",
+    "ctaText": "Explore Solutions",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "overlayOpacity": "bg-opacity-40"
+    "backgroundImage": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-50"
   },
   "clients": [
     {
@@ -149,55 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "Premium Cotton Fabrics",
-      "slug": "premium-cotton-fabrics",
-      "shortDescription": "100% pure cotton fabrics in various weaves",
-      "description": "High-quality cotton fabrics sourced from the finest cotton growing regions of India. Available in various weaves, weights, and finishes for apparel and home textiles.",
-      "price": "₹150 - ₹800 per meter",
-      "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Precision Agriculture Systems",
+      "slug": "precision-agriculture-systems",
+      "shortDescription": "Smart farming technology for optimal yields",
+      "description": "Advanced precision agriculture solutions including soil sensors, drone monitoring, and automated irrigation systems to maximize crop yields while minimizing resource usage.",
+      "price": "₹2,50,000 - ₹15,00,000",
+      "image": "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "100% pure cotton",
-        "GOTS certified",
-        "Colorfast dyes",
-        "Multiple weights",
-        "Custom prints",
-        "Export quality"
+        "Soil monitoring",
+        "Drone surveillance",
+        "Automated irrigation",
+        "Weather integration",
+        "Mobile app control",
+        "Data analytics"
       ],
-      "category": "Cotton Textiles"
+      "category": "Farm Technology"
     },
     {
-      "name": "Traditional Silk Sarees",
-      "slug": "traditional-silk-sarees",
-      "shortDescription": "Handwoven silk sarees with traditional motifs",
-      "description": "Exquisite handwoven silk sarees featuring traditional Indian motifs and designs. Each piece represents hours of skilled craftsmanship by master weavers.",
-      "price": "₹5,000 - ₹75,000",
-      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Organic Food Processing",
+      "slug": "organic-food-processing",
+      "shortDescription": "Premium organic food products and processing",
+      "description": "State-of-the-art food processing facility producing certified organic products including grains, spices, and packaged foods with complete traceability.",
+      "price": "₹50 - ₹500 per kg",
+      "image": "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Pure silk",
-        "Handwoven",
-        "Traditional motifs",
-        "Natural dyes",
-        "GI tagged",
-        "Artisan crafted"
-      ],
-      "category": "Silk Products"
-    },
-    {
-      "name": "Ready-to-Wear Garments",
-      "slug": "ready-to-wear-garments",
-      "shortDescription": "Contemporary fashion for domestic and export",
-      "description": "Modern ready-to-wear clothing line combining contemporary designs with traditional Indian elements. Manufactured to international quality standards.",
-      "price": "₹500 - ₹5,000",
-      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "features": [
-        "Contemporary designs",
-        "Quality stitching",
-        "Size range S-XXXL",
-        "Color variants",
+        "Organic certified",
+        "FSSAI approved",
+        "Traceability system",
+        "Custom packaging",
         "Export quality",
-        "Sustainable fabrics"
+        "Cold chain logistics"
       ],
-      "category": "Garments"
+      "category": "Food Processing"
+    },
+    {
+      "name": "Agricultural Machinery",
+      "slug": "agricultural-machinery",
+      "shortDescription": "Modern farm equipment and machinery",
+      "description": "Comprehensive range of agricultural machinery including tractors, harvesters, and specialized equipment designed for Indian farming conditions.",
+      "price": "₹3,50,000 - ₹25,00,000",
+      "image": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "features": [
+        "Fuel efficient",
+        "Low maintenance",
+        "Local service",
+        "Financing options",
+        "Training provided",
+        "Warranty support"
+      ],
+      "category": "Farm Equipment"
     }
   ],
   "about": {
@@ -257,19 +256,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Custom Fabric Development",
-    "Private Label Manufacturing",
-    "Design & Pattern Making",
-    "Quality Testing & Certification",
-    "Export Documentation",
-    "Logistics & Shipping"
+    "Farm Mechanization Consulting",
+    "Soil Testing & Analysis",
+    "Crop Advisory Services",
+    "Organic Certification Support",
+    "Post-Harvest Management",
+    "Market Linkage Programs"
   ],
   "certifications": [
-    "GOTS Certified",
-    "OEKO-TEX Standard",
-    "WRAP Certification",
-    "BCI Member",
-    "ISO 9001:2015"
+    "Organic India Certified",
+    "FSSAI Licensed",
+    "APEDA Registered",
+    "ISO 22000",
+    "Global GAP"
   ],
-  "sector": "Textiles and Garments"
+  "sector": "Agriculture & Agro Products",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Sustainable solutions provider",
+    "differentiators": [
+      "Sustainable practices",
+      "Farmer-centric approach",
+      "Technology integration"
+    ],
+    "competitiveAdvantage": "Comprehensive agricultural solutions from farm to fork with sustainability focus"
+  },
+  "contentStrategy": {
+    "tone": "Supportive, sustainable, progressive",
+    "messaging": [
+      "Innovation drives everything we do",
+      "Leading with technology",
+      "Smart solutions for modern challenges",
+      "Pioneering the future"
+    ],
+    "visualStyle": {
+      "primary": "innovation, digital, modern",
+      "secondary": "efficiency, smart solutions, future",
+      "style": "sleek, modern, high-tech"
+    }
+  },
+  "seo": {
+    "localKeywords": [
+      "agriculture agro India",
+      "agriculture agro manufacturer India",
+      "agriculture agro supplier Mumbai",
+      "agriculture agro company Delhi",
+      "Indian agriculture agro",
+      "best agriculture agro India",
+      "agriculture agro services India"
+    ],
+    "industryTerms": [
+      "precision agriculture",
+      "farm equipment",
+      "organic farming",
+      "agro processing"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

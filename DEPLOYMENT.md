@@ -1,245 +1,424 @@
-# Deployment Guide
+# Deployment Guide - Bun + Cloudflare Pages
 
 ## Quick Deployment Checklist
 
-### Before Deploying
+### ✅ Pre-Deployment Setup
 
-1. **Update Configuration**
-   - [ ] Edit `src/config/site.js` with your company details
-   - [ ] Replace placeholder logo in `public/logo.png`
-   - [ ] Update favicon in `public/favicon.ico`
-   - [ ] Add real product images and client logos
+1. **Sector Configuration**
+   - [ ] Choose your industry sector: `bun run customize list-sectors`
+   - [ ] Apply sector config: `bun run customize sector <your-sector>`
+   - [ ] Set color scheme: `bun run customize color <color>`
+   - [ ] Update company info: `bun run customize company --name "YourCompany"`
+
+2. **Content Verification**
+   - [ ] Replace placeholder company information
+   - [ ] Add real product/service details with Indian pricing (₹)
+   - [ ] Update contact information with Indian phone numbers
+   - [ ] Add relevant Indian certifications (BIS, ISI, etc.)
    - [ ] Test contact form functionality
 
-2. **Content Review**
-   - [ ] Proofread all text content
-   - [ ] Verify all links work correctly
-   - [ ] Check product information is accurate
-   - [ ] Validate contact information
+3. **Asset Optimization**
+   - [ ] Replace logo in `public/logo.png`
+   - [ ] Update favicon in `public/favicon.ico`
+   - [ ] Optimize all images for web (WebP format recommended)
+   - [ ] Test mobile responsiveness
 
-3. **Performance Check**
-   - [ ] Run `npm run build` to ensure no errors
-   - [ ] Test on mobile devices
-   - [ ] Verify image loading performance
-   - [ ] Check accessibility compliance
+4. **Build Testing**
+   - [ ] Run `bun run build` to ensure no errors
+   - [ ] Test with `bun run preview`
+   - [ ] Check all links and forms work
+   - [ ] Verify SEO meta tags
 
-## Deployment Options
+## 🚀 Cloudflare Pages Deployment
 
-### 1. Netlify (Recommended)
+### Option 1: Automatic Git Deployment (Recommended)
 
-**Automatic Deployment from Git:**
-
-1. Push your code to GitHub/GitLab
-2. Connect repository to Netlify
-3. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Deploy automatically on git push
-
-**Manual Deployment:**
-
+**Step 1: Repository Setup**
 ```bash
-npm run build
-# Upload dist/ folder to Netlify
+# Initialize git if not already done
+git init
+git add .
+git commit -m "Initial SME website setup"
+
+# Push to GitHub/GitLab
+git remote add origin <your-repo-url>
+git push -u origin main
 ```
 
-### 2. Vercel
+**Step 2: Connect to Cloudflare Pages**
 
-1. Import project from GitHub
-2. Vercel auto-detects Astro
-3. Deploy with zero configuration
+1. **Login to Cloudflare Dashboard**
+   - Visit [dash.cloudflare.com](https://dash.cloudflare.com)
+   - Navigate to Pages → Create a project
 
-### 3. GitHub Pages
+2. **Connect Git Repository**
+   - Choose GitHub/GitLab integration
+   - Select your repository
+   - Click "Begin setup"
 
-Add to `.github/workflows/deploy.yml`:
+3. **Configure Build Settings**
+   ```
+   Framework preset: Astro
+   Build command: bun run build
+   Build output directory: dist
+   Root directory: (leave blank)
+   Environment variables: (see below)
+   ```
 
-```yaml
-name: Deploy to GitHub Pages
+4. **Environment Variables (Optional)**
+   ```
+   NODE_VERSION=18
+   BUN_VERSION=latest
+   ```
 
-on:
-  push:
-    branches: [ "main" ]
-  workflow_dispatch:
+**Step 3: Deploy**
+- Click "Save and Deploy"
+- Your site will be live at `<project-name>.pages.dev`
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+### Option 2: Command Line Deployment
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-```
-
-### 4. Traditional Web Hosting
-
+**Install Wrangler CLI**
 ```bash
-npm run build
-# Upload contents of dist/ folder to your web server
+# Install globally
+bun add -g wrangler
+
+# Or use with bun directly
+bun wrangler --version
 ```
 
-## Domain Setup
-
-### Custom Domain
-
-1. **DNS Configuration:**
-   - A record: Point to hosting provider IP
-   - CNAME: Point to hosting provider domain
-
-2. **SSL Certificate:**
-   - Most modern hosts provide automatic SSL
-   - Enable HTTPS redirect
-
-### Subdomain Setup
-
-For staging/testing:
-- `staging.yourcompany.com`
-- `dev.yourcompany.com`
-
-## Environment Variables
-
-If using form submissions or analytics:
-
+**Authenticate with Cloudflare**
 ```bash
-# .env (not committed to git)
-PUBLIC_SITE_URL=https://yourcompany.com
-PUBLIC_GOOGLE_ANALYTICS_ID=GA_TRACKING_ID
-FORM_SUBMISSION_ENDPOINT=https://api.yourservice.com/submit
+bun wrangler login
 ```
 
-## Post-Deployment Tasks
+**Deploy Commands**
+```bash
+# Build and deploy to production
+bun run deploy
 
-### 1. SEO Setup
+# Deploy to preview environment
+bun run deploy:preview
 
-- [ ] Submit sitemap to Google Search Console
-- [ ] Verify meta descriptions are unique
-- [ ] Test Open Graph previews
-- [ ] Check page load speeds
+# Manual build and deploy
+bun run build
+bun wrangler pages deploy dist
+```
 
-### 2. Analytics
+## 🌐 Custom Domain Setup
 
-Add to `src/layouts/Layout.astro`:
+### Step 1: Add Custom Domain
+1. In Cloudflare Pages dashboard, go to your project
+2. Navigate to "Custom domains" tab
+3. Click "Set up a custom domain"
+4. Enter your domain name (e.g., `yourcompany.com`)
 
+### Step 2: DNS Configuration
+
+**If your domain is already on Cloudflare:**
+- DNS records will be configured automatically
+
+**If your domain is elsewhere:**
+1. Add these DNS records at your domain registrar:
+   ```
+   Type: CNAME
+   Name: www
+   Target: <your-pages-subdomain>.pages.dev
+
+   Type: A
+   Name: @
+   Target: (Cloudflare will provide the IP)
+   ```
+
+2. Or transfer nameservers to Cloudflare (recommended)
+
+### Step 3: SSL Certificate
+- SSL certificate is automatically provisioned
+- Force HTTPS redirect is enabled by default
+- Certificate typically takes 10-15 minutes to activate
+
+## ⚡ Performance Optimization
+
+### Build Optimization
+```bash
+# Enable all optimizations in astro.config.mjs
+export default defineConfig({
+  output: 'static',
+  build: {
+    inlineStylesheets: 'auto',
+  },
+  vite: {
+    build: {
+      cssCodeSplit: false,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
+      },
+    },
+  },
+});
+```
+
+### Cloudflare Page Rules
+Add these optimizations in Cloudflare dashboard:
+
+1. **Speed → Optimization**
+   - Auto Minify: CSS, JavaScript, HTML ✅
+   - Brotli compression ✅
+   - Early Hints ✅
+
+2. **Caching**
+   - Browser Cache TTL: 4 hours
+   - Edge Cache TTL: 2 hours for HTML, 1 month for assets
+
+3. **Security**
+   - Always Use HTTPS ✅
+   - Automatic HTTPS Rewrites ✅
+
+## 📊 Analytics & Monitoring
+
+### Cloudflare Web Analytics (Free)
 ```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<!-- Add to src/layouts/Layout.astro before </head> -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
+        data-cf-beacon='{"token": "YOUR_ANALYTICS_TOKEN"}'></script>
+```
+
+### Google Analytics 4
+```html
+<!-- Add to src/layouts/Layout.astro -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'GA_TRACKING_ID');
+  gtag('config', 'GA_MEASUREMENT_ID');
 </script>
 ```
 
-### 3. Form Handling
+### Performance Monitoring
+- Use Cloudflare's built-in analytics
+- Monitor Core Web Vitals
+- Set up uptime monitoring
 
-Replace contact form action with:
-- Netlify Forms (automatic)
-- Formspree
-- EmailJS
-- Custom API endpoint
+## 🔒 Security Configuration
 
-Example for Netlify:
+### Headers Enhancement
+Create `public/_headers` file:
+```
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+```
+
+### Content Security Policy
+Add to `src/layouts/Layout.astro`:
 ```html
-<form netlify name="contact">
-  <!-- form fields -->
-</form>
+<meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
 ```
 
-### 4. Monitoring
+## 🇮🇳 Indian Market Optimization
 
-Set up monitoring for:
-- [ ] Uptime monitoring
-- [ ] Performance tracking
-- [ ] Error logging
-- [ ] Form submission alerts
+### Regional CDN
+- Cloudflare automatically serves from nearest edge location
+- Indian users get content from Mumbai/Delhi data centers
+- Typical load times: 200-500ms across India
 
-## Maintenance
+### Local SEO Setup
+```javascript
+// Add to src/config/site.js
+seo: {
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "YourCompany",
+    "url": "https://yourcompany.com",
+    "logo": "https://yourcompany.com/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressRegion": "Maharashtra",
+      "addressLocality": "Mumbai"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-22-xxxx-xxxx",
+      "contactType": "customer service"
+    }
+  }
+}
+```
 
-### Regular Updates
+### Payment Integration Ready
+- Razorpay integration endpoints configured
+- Indian payment gateway compatibility
+- UPI payment links support
 
-- [ ] Update dependencies monthly
-- [ ] Review and update content quarterly
-- [ ] Check for broken links
-- [ ] Monitor performance metrics
-- [ ] Backup site regularly
+## 🔄 Continuous Deployment
 
-### Security
+### Automated Builds
+```yaml
+# .github/workflows/deploy.yml (if using GitHub)
+name: Deploy to Cloudflare Pages
 
-- [ ] Keep dependencies updated
-- [ ] Monitor for security vulnerabilities
-- [ ] Use HTTPS everywhere
-- [ ] Implement CSP headers if needed
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-## Troubleshooting
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+          
+      - name: Install dependencies
+        run: bun install
+        
+      - name: Build site
+        run: bun run build
+        
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: your-project-name
+          directory: dist
+```
 
-### Common Issues
+### Preview Deployments
+- Every pull request gets a preview URL
+- Test changes before going live
+- Automatic cleanup of old previews
 
-**Build Failures:**
-- Check Node.js version (recommended: 18+)
-- Clear npm cache: `npm cache clean --force`
-- Delete node_modules and reinstall
+## 🚨 Troubleshooting
 
-**Images Not Loading:**
-- Verify image URLs are accessible
-- Check image file formats (jpg, png, webp)
-- Ensure proper CORS headers for external images
+### Common Build Issues
 
-**Styling Issues:**
-- Rebuild with `npm run build`
-- Check Tailwind CSS compilation
-- Verify CSS class names are correct
-
-**Mobile Issues:**
-- Test with real devices
-- Check viewport meta tag
-- Verify touch interactions work
-
-### Performance Optimization
-
+**Error: "bun: command not found"**
 ```bash
-# Optimize images
-npm install -g @squoosh/cli
-squoosh-cli --webp public/images/*.jpg
+# Set NODE_VERSION in Cloudflare Pages
+NODE_VERSION=18
+BUN_VERSION=latest
 
-# Analyze bundle
-npm run build -- --analyze
+# Or use npm fallback
+npm run build
 ```
 
-## Support
+**Error: "Module not found"**
+```bash
+# Clear cache and reinstall
+rm -rf node_modules bun.lockb
+bun install
+bun run build
+```
 
-For deployment issues:
-1. Check this guide first
-2. Review hosting provider documentation
-3. Test locally with `npm run preview`
-4. Check browser console for errors
+**Error: "Build timeout"**
+```bash
+# Optimize build performance
+export NODE_OPTIONS="--max-old-space-size=4096"
+bun run build
+```
+
+### Domain Issues
+
+**SSL Certificate Pending**
+- Wait 10-15 minutes for automatic provisioning
+- Ensure DNS records are correct
+- Contact Cloudflare support if stuck
+
+**Domain Not Resolving**
+- Check DNS propagation: `dig yourcompany.com`
+- Verify nameservers point to Cloudflare
+- Clear local DNS cache
+
+## 📱 Mobile & PWA
+
+### Progressive Web App Setup
+```javascript
+// Add to astro.config.mjs
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  // ... other config
+  experimental: {
+    assets: true,
+  },
+  vite: {
+    plugins: [
+      // Add PWA plugin when ready
+    ],
+  },
+});
+```
+
+### Mobile Optimization
+- Responsive images with `<picture>` elements
+- Touch-friendly button sizes (44px minimum)
+- Fast loading on 3G networks
+- Indian mobile browser compatibility
+
+## 📈 Post-Deployment Optimization
+
+### Week 1: Monitor Performance
+- Check Google PageSpeed Insights
+- Monitor Cloudflare Analytics
+- Test on various devices and networks
+- Gather initial user feedback
+
+### Week 2: SEO Optimization
+- Submit sitemap to Google Search Console
+- Optimize meta descriptions for Indian keywords
+- Add local business schema markup
+- Create Google My Business listing
+
+### Month 1: Advanced Features
+- A/B test different CTAs
+- Add customer chat widget
+- Implement lead capture forms
+- Set up email marketing integration
+
+## 💰 Cost Optimization
+
+### Cloudflare Pages Pricing
+- **Free Tier**: 1 build per minute, 500 builds/month
+- **Pro ($20/month)**: 5 builds per minute, 5,000 builds/month
+- **Business ($200/month)**: 20 builds per minute, 20,000 builds/month
+
+### Bandwidth & Storage
+- 100GB bandwidth free
+- Unlimited sites on paid plans
+- No storage limits for static sites
+
+### Indian Pricing Considerations
+- Use Indian Rupee (₹) pricing throughout
+- Consider GST implications for business
+- Payment gateway fees (2-3% typical)
 
 ---
 
-**Ready to Deploy?** Follow the checklist above and choose your preferred deployment method. The template is optimized for static hosting and should deploy without issues on most platforms.
+## 🚀 Ready to Deploy?
+
+### Quick Deploy Command
+```bash
+# Complete deployment in one command
+bun run deploy
+```
+
+### Support Resources
+- **Cloudflare Docs**: [developers.cloudflare.com/pages](https://developers.cloudflare.com/pages)
+- **Bun Documentation**: [bun.sh/docs](https://bun.sh/docs)
+- **Astro Deployment**: [docs.astro.build/guides/deploy](https://docs.astro.build/guides/deploy)
+
+Your SME website will be live on Cloudflare's global network with Indian edge locations for optimal performance! 🇮🇳

@@ -1,15 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T15:40:03.378Z
+// Generated Site Configuration for Consumer Goods and Household Products Sector
+// Auto-generated on 2025-07-19T15:38:45.069Z
 
 export const siteConfig = {
   "site": {
-    "name": "Heritage Textiles",
-    "title": "Premium Textiles & Garment Manufacturing",
-    "description": "Traditional craftsmanship meets modern technology in our premium textile and garment manufacturing for domestic and export markets",
+    "name": "HomeComfort Essentials",
+    "title": "Quality Consumer Goods & Household Products",
+    "description": "Innovative and affordable consumer products that enhance daily life with quality, convenience, and value for Indian families",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "textiles, garments, fabric manufacturing, cotton, silk, export, fashion, traditional wear"
+    "keywords": "consumer goods, household products, kitchen appliances, home care, personal care, FMCG, retail"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -29,8 +29,8 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "orange",
-    "style": "classic",
+    "primary": "pink",
+    "style": "modern",
     "layout": "wide"
   },
   "colors": {
@@ -67,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -79,12 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Weaving India's Textile Legacy",
-    "subtitle": "From traditional handlooms to modern manufacturing facilities, we create premium quality textiles and garments that showcase India's rich heritage while meeting global standards",
-    "ctaText": "View Collections",
+    "title": "Enhancing Every Indian Home",
+    "subtitle": "From innovative kitchen appliances to essential household products, we create solutions that make daily life more convenient, comfortable, and enjoyable for families across India",
+    "ctaText": "Shop Products",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "overlayOpacity": "bg-opacity-40"
+    "backgroundImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-45"
   },
   "clients": [
     {
@@ -149,55 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "Premium Cotton Fabrics",
-      "slug": "premium-cotton-fabrics",
-      "shortDescription": "100% pure cotton fabrics in various weaves",
-      "description": "High-quality cotton fabrics sourced from the finest cotton growing regions of India. Available in various weaves, weights, and finishes for apparel and home textiles.",
-      "price": "₹150 - ₹800 per meter",
-      "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Smart Kitchen Appliances",
+      "slug": "smart-kitchen-appliances",
+      "shortDescription": "Modern kitchen solutions for Indian homes",
+      "description": "Innovative kitchen appliances designed specifically for Indian cooking styles, featuring energy efficiency, durability, and user-friendly operation.",
+      "price": "₹2,500 - ₹35,000",
+      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "100% pure cotton",
-        "GOTS certified",
-        "Colorfast dyes",
-        "Multiple weights",
-        "Custom prints",
-        "Export quality"
+        "Energy efficient",
+        "Indian recipes",
+        "Easy cleaning",
+        "Compact design",
+        "Safety features",
+        "Warranty included"
       ],
-      "category": "Cotton Textiles"
+      "category": "Kitchen Appliances"
     },
     {
-      "name": "Traditional Silk Sarees",
-      "slug": "traditional-silk-sarees",
-      "shortDescription": "Handwoven silk sarees with traditional motifs",
-      "description": "Exquisite handwoven silk sarees featuring traditional Indian motifs and designs. Each piece represents hours of skilled craftsmanship by master weavers.",
-      "price": "₹5,000 - ₹75,000",
-      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Eco-Friendly Home Care",
+      "slug": "eco-friendly-home-care",
+      "shortDescription": "Natural and biodegradable cleaning products",
+      "description": "Environmentally conscious home care products made from natural ingredients that are safe for families while being effective against dirt and germs.",
+      "price": "₹150 - ₹800",
+      "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Pure silk",
-        "Handwoven",
-        "Traditional motifs",
-        "Natural dyes",
-        "GI tagged",
-        "Artisan crafted"
+        "Natural ingredients",
+        "Biodegradable",
+        "Child safe",
+        "Effective cleaning",
+        "Pleasant fragrance",
+        "Value packs"
       ],
-      "category": "Silk Products"
+      "category": "Home Care"
     },
     {
-      "name": "Ready-to-Wear Garments",
-      "slug": "ready-to-wear-garments",
-      "shortDescription": "Contemporary fashion for domestic and export",
-      "description": "Modern ready-to-wear clothing line combining contemporary designs with traditional Indian elements. Manufactured to international quality standards.",
-      "price": "₹500 - ₹5,000",
-      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Personal Care Essentials",
+      "slug": "personal-care-essentials",
+      "shortDescription": "Daily essentials for personal hygiene and care",
+      "description": "Complete range of personal care products including skincare, hair care, and hygiene essentials formulated for Indian skin and hair types.",
+      "price": "₹99 - ₹1,500",
+      "image": "https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Contemporary designs",
-        "Quality stitching",
-        "Size range S-XXXL",
-        "Color variants",
-        "Export quality",
-        "Sustainable fabrics"
+        "Dermatologically tested",
+        "Natural extracts",
+        "All skin types",
+        "Paraben free",
+        "Value pricing",
+        "Family size options"
       ],
-      "category": "Garments"
+      "category": "Personal Care"
     }
   ],
   "about": {
@@ -257,19 +256,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Custom Fabric Development",
-    "Private Label Manufacturing",
-    "Design & Pattern Making",
-    "Quality Testing & Certification",
-    "Export Documentation",
-    "Logistics & Shipping"
+    "Retail Distribution Network",
+    "Customer Support Services",
+    "Product Demonstration",
+    "Home Delivery Options",
+    "Bulk Purchase Discounts",
+    "Loyalty Programs"
   ],
   "certifications": [
-    "GOTS Certified",
-    "OEKO-TEX Standard",
-    "WRAP Certification",
-    "BCI Member",
-    "ISO 9001:2015"
+    "ISI Mark",
+    "BIS Standards",
+    "FSSAI Licensed",
+    "ISO 9001:2015",
+    "Eco-Mark Certified"
   ],
-  "sector": "Textiles and Garments"
+  "sector": "Consumer Goods and Household Products",
+  "businessContext": "B2C/B2B",
+  "targetAudience": "End consumers, retailers, distributors",
+  "marketPosition": {
+    "primary": "Value and convenience champion",
+    "differentiators": [
+      "Indian preferences",
+      "Value pricing",
+      "Wide distribution"
+    ],
+    "competitiveAdvantage": "Products designed specifically for Indian households with unmatched value"
+  },
+  "contentStrategy": {
+    "tone": "Friendly, accessible, value-oriented",
+    "messaging": [
+      "Premium quality at competitive prices",
+      "Maximum value for your investment",
+      "Cost-effective solutions",
+      "Quality that pays for itself"
+    ],
+    "visualStyle": {
+      "primary": "home, family, lifestyle",
+      "secondary": "comfort, convenience, quality",
+      "style": "warm, inviting, accessible"
+    }
+  },
+  "seo": {
+    "localKeywords": [
+      "consumer goods India",
+      "consumer goods manufacturer India",
+      "consumer goods supplier Mumbai",
+      "consumer goods company Delhi",
+      "Indian consumer goods",
+      "best consumer goods India",
+      "consumer goods services India"
+    ],
+    "industryTerms": [
+      "household products",
+      "kitchen appliances",
+      "home care",
+      "FMCG"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

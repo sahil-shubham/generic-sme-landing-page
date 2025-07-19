@@ -1,15 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T15:40:03.378Z
+// Generated Site Configuration for Construction Materials and Hardware Sector
+// Auto-generated on 2025-07-19T15:38:45.070Z
 
 export const siteConfig = {
   "site": {
-    "name": "Heritage Textiles",
-    "title": "Premium Textiles & Garment Manufacturing",
-    "description": "Traditional craftsmanship meets modern technology in our premium textile and garment manufacturing for domestic and export markets",
+    "name": "BuildStrong Materials",
+    "title": "Premium Construction Materials & Hardware",
+    "description": "High-quality construction materials and hardware solutions for residential, commercial, and infrastructure projects across India",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "textiles, garments, fabric manufacturing, cotton, silk, export, fashion, traditional wear"
+    "keywords": "construction materials, building supplies, hardware, cement, steel, tools, infrastructure, building materials"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -29,8 +29,8 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "orange",
-    "style": "classic",
+    "primary": "red",
+    "style": "bold",
     "layout": "wide"
   },
   "colors": {
@@ -67,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -79,12 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Weaving India's Textile Legacy",
-    "subtitle": "From traditional handlooms to modern manufacturing facilities, we create premium quality textiles and garments that showcase India's rich heritage while meeting global standards",
-    "ctaText": "View Collections",
+    "title": "Building India's Infrastructure",
+    "subtitle": "From premium construction materials to specialized hardware, we provide the foundation for India's growing infrastructure with products that ensure strength, durability, and sustainability",
+    "ctaText": "View Materials",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "overlayOpacity": "bg-opacity-40"
+    "backgroundImage": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-50"
   },
   "clients": [
     {
@@ -149,55 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "Premium Cotton Fabrics",
-      "slug": "premium-cotton-fabrics",
-      "shortDescription": "100% pure cotton fabrics in various weaves",
-      "description": "High-quality cotton fabrics sourced from the finest cotton growing regions of India. Available in various weaves, weights, and finishes for apparel and home textiles.",
-      "price": "₹150 - ₹800 per meter",
-      "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "High-Grade Construction Steel",
+      "slug": "high-grade-construction-steel",
+      "shortDescription": "Premium quality TMT bars and structural steel",
+      "description": "Superior quality TMT bars and structural steel products manufactured to international standards for maximum strength and corrosion resistance in construction projects.",
+      "price": "₹45,000 - ₹65,000 per ton",
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "100% pure cotton",
-        "GOTS certified",
-        "Colorfast dyes",
-        "Multiple weights",
-        "Custom prints",
-        "Export quality"
+        "High tensile strength",
+        "Corrosion resistant",
+        "Earthquake resistant",
+        "BIS certified",
+        "Various grades",
+        "Custom lengths"
       ],
-      "category": "Cotton Textiles"
+      "category": "Steel Products"
     },
     {
-      "name": "Traditional Silk Sarees",
-      "slug": "traditional-silk-sarees",
-      "shortDescription": "Handwoven silk sarees with traditional motifs",
-      "description": "Exquisite handwoven silk sarees featuring traditional Indian motifs and designs. Each piece represents hours of skilled craftsmanship by master weavers.",
-      "price": "₹5,000 - ₹75,000",
-      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Advanced Cement Solutions",
+      "slug": "advanced-cement-solutions",
+      "shortDescription": "Specialized cement for different construction needs",
+      "description": "Comprehensive range of cement products including OPC, PPC, and specialized cement for different construction applications with superior strength and workability.",
+      "price": "₹350 - ₹450 per bag",
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Pure silk",
-        "Handwoven",
-        "Traditional motifs",
-        "Natural dyes",
-        "GI tagged",
-        "Artisan crafted"
+        "High compressive strength",
+        "Low heat of hydration",
+        "Workability enhancer",
+        "Durability assured",
+        "Environment friendly",
+        "Bulk supply"
       ],
-      "category": "Silk Products"
+      "category": "Cement"
     },
     {
-      "name": "Ready-to-Wear Garments",
-      "slug": "ready-to-wear-garments",
-      "shortDescription": "Contemporary fashion for domestic and export",
-      "description": "Modern ready-to-wear clothing line combining contemporary designs with traditional Indian elements. Manufactured to international quality standards.",
-      "price": "₹500 - ₹5,000",
-      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "name": "Professional Hardware Tools",
+      "slug": "professional-hardware-tools",
+      "shortDescription": "Complete range of construction and hardware tools",
+      "description": "Professional-grade tools and hardware for construction, including power tools, hand tools, fasteners, and safety equipment for contractors and builders.",
+      "price": "₹500 - ₹50,000",
+      "image": "https://images.unsplash.com/photo-1592600670092-7b4cbae88458?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Contemporary designs",
-        "Quality stitching",
-        "Size range S-XXXL",
-        "Color variants",
-        "Export quality",
-        "Sustainable fabrics"
+        "Professional grade",
+        "Ergonomic design",
+        "Durable materials",
+        "Safety certified",
+        "Warranty included",
+        "Service support"
       ],
-      "category": "Garments"
+      "category": "Tools & Hardware"
     }
   ],
   "about": {
@@ -257,19 +256,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Custom Fabric Development",
-    "Private Label Manufacturing",
-    "Design & Pattern Making",
-    "Quality Testing & Certification",
-    "Export Documentation",
-    "Logistics & Shipping"
+    "Project Material Planning",
+    "Technical Consultation",
+    "Site Delivery Services",
+    "Quality Testing Support",
+    "Contractor Training Programs",
+    "After-Sales Service"
   ],
   "certifications": [
-    "GOTS Certified",
-    "OEKO-TEX Standard",
-    "WRAP Certification",
-    "BCI Member",
-    "ISO 9001:2015"
+    "BIS Standards",
+    "ISI Mark",
+    "ISO 9001:2015",
+    "Environment Clearance",
+    "Quality Assured"
   ],
-  "sector": "Textiles and Garments"
+  "sector": "Construction Materials and Hardware",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Strength and reliability partner",
+    "differentiators": [
+      "Durability focus",
+      "Project support",
+      "Technical expertise"
+    ],
+    "competitiveAdvantage": "Trusted partner for India's infrastructure development with proven reliability"
+  },
+  "contentStrategy": {
+    "tone": "Strong, dependable, professional",
+    "messaging": [
+      "Customer satisfaction is our priority",
+      "Dedicated support every step",
+      "Your success is our mission",
+      "Partnership beyond products"
+    ],
+    "visualStyle": {
+      "primary": "factory, machinery, industrial environment",
+      "secondary": "workers, precision, modern equipment",
+      "style": "professional, clean, technical"
+    }
+  },
+  "seo": {
+    "localKeywords": [
+      "construction hardware India",
+      "construction hardware manufacturer India",
+      "construction hardware supplier Mumbai",
+      "construction hardware company Delhi",
+      "Indian construction hardware",
+      "best construction hardware India",
+      "construction hardware services India"
+    ],
+    "industryTerms": [
+      "construction materials",
+      "building supplies",
+      "hardware tools",
+      "infrastructure"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };
