@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 const { product } = Astro.props;
 const { theme, colors } = siteConfig;
-const currentColors = colors[theme.primary];
+const currentColors = colors[theme.primary as keyof typeof colors];
 ---
 
 <Layout title={product.name} description={product.description}>

@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { siteConfig } from '../config/site.js';
 
 const { about, theme, colors, site } = siteConfig;
-const currentColors = colors[theme.primary];
+const currentColors = colors[theme.primary as keyof typeof colors];
 ---
 
 <Layout title="About Us" description="Learn more about our company, mission, and the team behind our innovative solutions.">

@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { siteConfig } from '../config/site.js';
 
 const { products, theme, colors } = siteConfig;
-const currentColors = colors[theme.primary];
+const currentColors = colors[theme.primary as keyof typeof colors];
 
 // Get unique categories
 const categories = [...new Set(products.map(product => product.category))];

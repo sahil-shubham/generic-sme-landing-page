@@ -2,7 +2,7 @@
 import { siteConfig } from '../config/site.js';
 
 const { hero, theme, colors } = siteConfig;
-const currentColors = colors[theme.primary];
+const currentColors = colors[theme.primary as keyof typeof colors];
 ---
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">

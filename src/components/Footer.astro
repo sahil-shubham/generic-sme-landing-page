@@ -2,7 +2,7 @@
 import { siteConfig } from '../config/site.js';
 
 const { site, contact, navigation, theme, colors } = siteConfig;
-const currentColors = colors[theme.primary];
+const currentColors = colors[theme.primary as keyof typeof colors];
 const currentYear = new Date().getFullYear();
 ---
 

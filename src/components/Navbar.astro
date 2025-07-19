@@ -3,7 +3,7 @@ import { siteConfig } from '../config/site.js';
 
 const { navigation, site, theme, colors } = siteConfig;
 const currentPath = Astro.url.pathname;
-const currentColors = colors[theme.primary];
+const currentColors = colors[theme.primary as keyof typeof colors];
 ---
 
 <nav class="bg-white shadow-sm sticky top-0 z-50">
@@ -102,7 +102,7 @@ const currentColors = colors[theme.primary];
       
       // Close mobile menu when clicking outside
       document.addEventListener('click', function(event) {
-        if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+        if (!mobileMenuButton.contains(event.target as Node) && !mobileMenu.contains(event.target as Node)) {
           mobileMenu.classList.add('hidden');
         }
       });
