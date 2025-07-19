@@ -10,7 +10,14 @@
     "deploy": "npm run build && wrangler deploy",
     "deploy:preview": "npm run build && wrangler deploy --env preview",
     "generate:sectors": "node scripts/generate-sector-configs.mjs",
-    "customize": "node scripts/customize.mjs"
+    "customize": "node scripts/customize.mjs",
+    "images:refresh": "node scripts/customize.mjs refresh-images",
+    "images:generate": "node scripts/customize.mjs refresh-images",
+    "template:apply": "node scripts/customize.mjs template",
+    "template:list": "node scripts/customize.mjs list-templates",
+    "variations:generate": "node scripts/customize.mjs variations",
+    "setup:wizard": "node scripts/customize.mjs wizard",
+    "status": "node scripts/customize.mjs status"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
