@@ -1,16 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T19:44:01.205Z
-// Generated with enhanced image and component support
+// Generated Site Configuration for Electronics & Electrical Goods Sector
+// Auto-generated on 2025-07-19T15:38:45.068Z
 
 export const siteConfig = {
   "site": {
-    "name": "IndoMach Solutions",
-    "title": "Industrial Machinery & Equipment Specialists",
-    "description": "Leading manufacturer and supplier of industrial machinery, automation solutions, and precision equipment for modern manufacturing",
+    "name": "ElectroTech India",
+    "title": "Advanced Electronics & Electrical Solutions",
+    "description": "Comprehensive range of electronic devices, electrical equipment, and smart technology solutions for businesses and institutions",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "industrial machinery, manufacturing equipment, automation, precision tools, factory equipment, CNC machines"
+    "keywords": "electronics, electrical equipment, fingerprint scanners, photocopiers, LED lighting, sensors, automation"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -30,9 +29,9 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "blue",
+    "primary": "purple",
     "style": "modern",
-    "layout": "wide"
+    "layout": "centered"
   },
   "colors": {
     "blue": {
@@ -40,8 +39,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-blue-700",
       "accent": "bg-blue-100",
       "text": "text-blue-600",
-      "gradient": "from-blue-600 to-blue-800",
-      "description": "Professional and trustworthy"
+      "gradient": "from-blue-600 to-blue-800"
     },
     "green": {
       "primary": "bg-green-600",
@@ -55,8 +53,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-purple-700",
       "accent": "bg-purple-100",
       "text": "text-purple-600",
-      "gradient": "from-purple-600 to-purple-800",
-      "description": "Creative and innovative"
+      "gradient": "from-purple-600 to-purple-800"
     },
     "red": {
       "primary": "bg-red-600",
@@ -70,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -82,14 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Powering India's Manufacturing Revolution",
-    "subtitle": "From precision CNC machines to complete automation solutions, we deliver world-class industrial equipment that drives efficiency and productivity",
-    "ctaText": "View Our Machinery",
+    "title": "Smart Electronics for Modern India",
+    "subtitle": "From advanced biometric systems to intelligent lighting solutions, we provide cutting-edge electronic and electrical products that enhance security, efficiency, and productivity",
+    "ctaText": "Explore Products",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=2070&h=1380&q=80",
-    "overlayOpacity": "bg-opacity-60",
-    "imageAlt": "Professional business environment",
-    "imageDescription": "Modern professional workspace"
+    "backgroundImage": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-50"
   },
   "clients": [
     {
@@ -154,58 +148,72 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "CNC Machining Centers",
-      "slug": "cnc-machining-centers",
-      "shortDescription": "High-precision CNC machines for complex manufacturing",
-      "description": "Advanced computer numerical control machining centers designed for high-precision manufacturing. Features multi-axis capabilities, automatic tool changers, and integrated quality control systems.",
-      "price": "₹25,00,000 - ₹1,20,00,000",
-      "image": "https://images.unsplash.com/photo-1516996087931-5ae405802f4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Biometric Fingerprint Scanners",
+      "slug": "biometric-fingerprint-scanners",
+      "shortDescription": "Advanced biometric access control systems",
+      "description": "High-security fingerprint scanning systems with advanced algorithms for accurate identification. Suitable for offices, factories, and government institutions.",
+      "price": "₹15,000 - ₹85,000",
+      "image": "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "5-axis machining capability",
-        "Automatic tool changer",
-        "In-process measurement",
-        "CAM software included",
-        "24/7 technical support",
-        "Training included"
+        "99.9% accuracy",
+        "1:N identification",
+        "TCP/IP connectivity",
+        "Anti-spoofing technology",
+        "Weather resistant",
+        "Mobile app integration"
       ],
-      "category": "Precision Machinery",
-      "imageAlt": "CNC Machining Center"
+      "category": "Security Systems"
     },
     {
-      "name": "Industrial Automation Systems",
-      "slug": "industrial-automation-systems",
-      "shortDescription": "Complete factory automation and control systems",
-      "description": "Comprehensive automation solutions including PLCs, SCADA systems, robotic integration, and process control for manufacturing excellence.",
-      "price": "₹5,00,000 - ₹50,00,000",
-      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Multifunction Photocopier Machines",
+      "slug": "multifunction-photocopier-machines",
+      "shortDescription": "Professional printing and document solutions",
+      "description": "High-speed multifunction printers with scanning, copying, and network capabilities. Perfect for offices and business centers.",
+      "price": "₹45,000 - ₹3,50,000",
+      "image": "https://images.unsplash.com/photo-1586281010138-8e1b33aa4d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "PLC programming",
-        "SCADA integration",
-        "Robotic automation",
-        "Process monitoring",
-        "Remote diagnostics",
-        "Energy optimization"
+        "High-speed printing",
+        "Duplex scanning",
+        "Network connectivity",
+        "Mobile printing",
+        "Document security",
+        "Cost control"
       ],
-      "category": "Automation",
-      "imageAlt": "Conveyor System"
+      "category": "Office Equipment"
     },
     {
-      "name": "Material Handling Equipment",
-      "slug": "material-handling-equipment",
-      "shortDescription": "Conveyor systems and warehouse automation",
-      "description": "Advanced material handling solutions including conveyor systems, automated storage, and warehouse management systems for efficient logistics.",
-      "price": "₹2,00,000 - ₹15,00,000",
-      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "LED High Mast Lighting",
+      "slug": "led-high-mast-lighting",
+      "shortDescription": "Energy-efficient outdoor lighting solutions",
+      "description": "Professional LED high mast lighting systems for stadiums, parking areas, and industrial complexes with intelligent controls and energy savings.",
+      "price": "₹1,20,000 - ₹8,50,000",
+      "image": "https://images.unsplash.com/photo-1558618666-4c1d51c6c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Modular design",
-        "Variable speed control",
-        "Safety systems",
-        "Easy maintenance",
-        "Custom configurations",
-        "Installation support"
+        "80% energy savings",
+        "Smart controls",
+        "Weather resistant",
+        "25-year lifespan",
+        "Remote monitoring",
+        "Custom pole heights"
       ],
-      "category": "Material Handling",
-      "imageAlt": "Industrial Robot"
+      "category": "Lighting Solutions"
+    },
+    {
+      "name": "Industrial IoT Sensors",
+      "slug": "industrial-iot-sensors",
+      "shortDescription": "Smart sensors for Industry 4.0 applications",
+      "description": "Advanced wireless sensors for temperature, humidity, pressure, and motion monitoring with cloud connectivity and real-time alerts.",
+      "price": "₹5,000 - ₹45,000",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "features": [
+        "Wireless connectivity",
+        "Cloud integration",
+        "Real-time monitoring",
+        "Mobile alerts",
+        "Long battery life",
+        "Weatherproof design"
+      ],
+      "category": "IoT Solutions"
     }
   ],
   "about": {
@@ -265,46 +273,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Equipment Installation & Commissioning",
-    "Preventive Maintenance Programs",
-    "Technical Training & Certification",
-    "Spare Parts & Service Support",
-    "Equipment Modernization",
-    "Performance Optimization"
+    "Installation & Configuration",
+    "Annual Maintenance Contracts",
+    "Technical Support & Training",
+    "Custom Integration Solutions",
+    "Warranty & Repair Services",
+    "System Upgrades"
   ],
   "certifications": [
-    "ISO 9001:2015",
+    "BIS Certification",
+    "RoHS Compliance",
+    "FCC Approved",
     "CE Marking",
-    "BIS Standards",
-    "Make in India"
+    "ISO 9001:2015"
   ],
-  "sector": "Industrial Machinery & Equipment",
-  "layoutTemplate": "corporate_professional",
-  "componentVariations": {
-    "navbar": "horizontal_classic",
-    "hero": "classic_centered",
-    "products": "grid_classic",
-    "about": "split_content",
-    "testimonials": "carousel_classic",
-    "footer": "multi_column"
+  "sector": "Electronics & Electrical Goods",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Innovation leader",
+    "differentiators": [
+      "Cutting-edge technology",
+      "Reliable performance",
+      "Comprehensive support"
+    ],
+    "competitiveAdvantage": "Combining international technology with local market expertise and support"
   },
-  "designMood": "professional",
-  "trustLevel": "high",
-  "team": [
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Manufacturing manager",
-      "role": "manager"
+  "contentStrategy": {
+    "tone": "Modern, innovative, reliable",
+    "messaging": [
+      "Innovation drives everything we do",
+      "Leading with technology",
+      "Smart solutions for modern challenges",
+      "Pioneering the future"
+    ],
+    "visualStyle": {
+      "primary": "innovation, digital, modern",
+      "secondary": "efficiency, smart solutions, future",
+      "style": "sleek, modern, high-tech"
     }
-  ]
+  },
+  "seo": {
+    "localKeywords": [
+      "electronics electrical India",
+      "electronics electrical manufacturer India",
+      "electronics electrical supplier Mumbai",
+      "electronics electrical company Delhi",
+      "Indian electronics electrical",
+      "best electronics electrical India",
+      "electronics electrical services India"
+    ],
+    "industryTerms": [
+      "biometric systems",
+      "LED lighting",
+      "sensors",
+      "electronic equipment"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

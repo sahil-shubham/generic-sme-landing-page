@@ -1,19 +1,35 @@
 {
-  "name": "hilarious-horizon",
+  "name": "comprehensive-sme-website-template",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:preview": "npm run build && wrangler deploy --env preview",
+    "generate:sectors": "node scripts/generate-sector-configs.mjs",
+    "customize": "node scripts/customize.mjs",
+    "images:refresh": "node scripts/customize.mjs refresh-images",
+    "images:generate": "node scripts/customize.mjs refresh-images",
+    "template:apply": "node scripts/customize.mjs template",
+    "template:list": "node scripts/customize.mjs list-templates",
+    "variations:generate": "node scripts/customize.mjs variations",
+    "setup:wizard": "node scripts/customize.mjs wizard",
+    "status": "node scripts/customize.mjs status"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.12.0",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/react": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "wrangler": "^4.25.0"
-  }
+  },
+  "packageManager": "bun@1.0.0"
 }

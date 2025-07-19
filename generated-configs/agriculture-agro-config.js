@@ -1,16 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T19:44:01.205Z
-// Generated with enhanced image and component support
+// Generated Site Configuration for Agriculture & Agro Products Sector
+// Auto-generated on 2025-07-19T15:38:45.068Z
 
 export const siteConfig = {
   "site": {
-    "name": "IndoMach Solutions",
-    "title": "Industrial Machinery & Equipment Specialists",
-    "description": "Leading manufacturer and supplier of industrial machinery, automation solutions, and precision equipment for modern manufacturing",
+    "name": "AgriTech Solutions",
+    "title": "Modern Agriculture & Premium Agro Products",
+    "description": "Sustainable farming solutions and premium agricultural products that nourish communities while supporting farmer prosperity",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "industrial machinery, manufacturing equipment, automation, precision tools, factory equipment, CNC machines"
+    "keywords": "agriculture, farming, organic products, agro processing, farm equipment, sustainable farming, food processing"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -30,7 +29,7 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "blue",
+    "primary": "green",
     "style": "modern",
     "layout": "wide"
   },
@@ -40,8 +39,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-blue-700",
       "accent": "bg-blue-100",
       "text": "text-blue-600",
-      "gradient": "from-blue-600 to-blue-800",
-      "description": "Professional and trustworthy"
+      "gradient": "from-blue-600 to-blue-800"
     },
     "green": {
       "primary": "bg-green-600",
@@ -55,8 +53,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-purple-700",
       "accent": "bg-purple-100",
       "text": "text-purple-600",
-      "gradient": "from-purple-600 to-purple-800",
-      "description": "Creative and innovative"
+      "gradient": "from-purple-600 to-purple-800"
     },
     "red": {
       "primary": "bg-red-600",
@@ -70,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -82,14 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Powering India's Manufacturing Revolution",
-    "subtitle": "From precision CNC machines to complete automation solutions, we deliver world-class industrial equipment that drives efficiency and productivity",
-    "ctaText": "View Our Machinery",
+    "title": "Cultivating India's Agricultural Future",
+    "subtitle": "From innovative farming technologies to premium processed foods, we're committed to sustainable agriculture that benefits farmers, consumers, and the environment",
+    "ctaText": "Explore Solutions",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=2070&h=1380&q=80",
-    "overlayOpacity": "bg-opacity-60",
-    "imageAlt": "Professional business environment",
-    "imageDescription": "Modern professional workspace"
+    "backgroundImage": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-50"
   },
   "clients": [
     {
@@ -154,58 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "CNC Machining Centers",
-      "slug": "cnc-machining-centers",
-      "shortDescription": "High-precision CNC machines for complex manufacturing",
-      "description": "Advanced computer numerical control machining centers designed for high-precision manufacturing. Features multi-axis capabilities, automatic tool changers, and integrated quality control systems.",
-      "price": "₹25,00,000 - ₹1,20,00,000",
-      "image": "https://images.unsplash.com/photo-1516996087931-5ae405802f4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Precision Agriculture Systems",
+      "slug": "precision-agriculture-systems",
+      "shortDescription": "Smart farming technology for optimal yields",
+      "description": "Advanced precision agriculture solutions including soil sensors, drone monitoring, and automated irrigation systems to maximize crop yields while minimizing resource usage.",
+      "price": "₹2,50,000 - ₹15,00,000",
+      "image": "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "5-axis machining capability",
-        "Automatic tool changer",
-        "In-process measurement",
-        "CAM software included",
-        "24/7 technical support",
-        "Training included"
+        "Soil monitoring",
+        "Drone surveillance",
+        "Automated irrigation",
+        "Weather integration",
+        "Mobile app control",
+        "Data analytics"
       ],
-      "category": "Precision Machinery",
-      "imageAlt": "CNC Machining Center"
+      "category": "Farm Technology"
     },
     {
-      "name": "Industrial Automation Systems",
-      "slug": "industrial-automation-systems",
-      "shortDescription": "Complete factory automation and control systems",
-      "description": "Comprehensive automation solutions including PLCs, SCADA systems, robotic integration, and process control for manufacturing excellence.",
-      "price": "₹5,00,000 - ₹50,00,000",
-      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Organic Food Processing",
+      "slug": "organic-food-processing",
+      "shortDescription": "Premium organic food products and processing",
+      "description": "State-of-the-art food processing facility producing certified organic products including grains, spices, and packaged foods with complete traceability.",
+      "price": "₹50 - ₹500 per kg",
+      "image": "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "PLC programming",
-        "SCADA integration",
-        "Robotic automation",
-        "Process monitoring",
-        "Remote diagnostics",
-        "Energy optimization"
+        "Organic certified",
+        "FSSAI approved",
+        "Traceability system",
+        "Custom packaging",
+        "Export quality",
+        "Cold chain logistics"
       ],
-      "category": "Automation",
-      "imageAlt": "Conveyor System"
+      "category": "Food Processing"
     },
     {
-      "name": "Material Handling Equipment",
-      "slug": "material-handling-equipment",
-      "shortDescription": "Conveyor systems and warehouse automation",
-      "description": "Advanced material handling solutions including conveyor systems, automated storage, and warehouse management systems for efficient logistics.",
-      "price": "₹2,00,000 - ₹15,00,000",
-      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Agricultural Machinery",
+      "slug": "agricultural-machinery",
+      "shortDescription": "Modern farm equipment and machinery",
+      "description": "Comprehensive range of agricultural machinery including tractors, harvesters, and specialized equipment designed for Indian farming conditions.",
+      "price": "₹3,50,000 - ₹25,00,000",
+      "image": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Modular design",
-        "Variable speed control",
-        "Safety systems",
-        "Easy maintenance",
-        "Custom configurations",
-        "Installation support"
+        "Fuel efficient",
+        "Low maintenance",
+        "Local service",
+        "Financing options",
+        "Training provided",
+        "Warranty support"
       ],
-      "category": "Material Handling",
-      "imageAlt": "Industrial Robot"
+      "category": "Farm Equipment"
     }
   ],
   "about": {
@@ -265,46 +256,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Equipment Installation & Commissioning",
-    "Preventive Maintenance Programs",
-    "Technical Training & Certification",
-    "Spare Parts & Service Support",
-    "Equipment Modernization",
-    "Performance Optimization"
+    "Farm Mechanization Consulting",
+    "Soil Testing & Analysis",
+    "Crop Advisory Services",
+    "Organic Certification Support",
+    "Post-Harvest Management",
+    "Market Linkage Programs"
   ],
   "certifications": [
-    "ISO 9001:2015",
-    "CE Marking",
-    "BIS Standards",
-    "Make in India"
+    "Organic India Certified",
+    "FSSAI Licensed",
+    "APEDA Registered",
+    "ISO 22000",
+    "Global GAP"
   ],
-  "sector": "Industrial Machinery & Equipment",
-  "layoutTemplate": "corporate_professional",
-  "componentVariations": {
-    "navbar": "horizontal_classic",
-    "hero": "classic_centered",
-    "products": "grid_classic",
-    "about": "split_content",
-    "testimonials": "carousel_classic",
-    "footer": "multi_column"
+  "sector": "Agriculture & Agro Products",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Sustainable solutions provider",
+    "differentiators": [
+      "Sustainable practices",
+      "Farmer-centric approach",
+      "Technology integration"
+    ],
+    "competitiveAdvantage": "Comprehensive agricultural solutions from farm to fork with sustainability focus"
   },
-  "designMood": "professional",
-  "trustLevel": "high",
-  "team": [
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Manufacturing manager",
-      "role": "manager"
+  "contentStrategy": {
+    "tone": "Supportive, sustainable, progressive",
+    "messaging": [
+      "Innovation drives everything we do",
+      "Leading with technology",
+      "Smart solutions for modern challenges",
+      "Pioneering the future"
+    ],
+    "visualStyle": {
+      "primary": "innovation, digital, modern",
+      "secondary": "efficiency, smart solutions, future",
+      "style": "sleek, modern, high-tech"
     }
-  ]
+  },
+  "seo": {
+    "localKeywords": [
+      "agriculture agro India",
+      "agriculture agro manufacturer India",
+      "agriculture agro supplier Mumbai",
+      "agriculture agro company Delhi",
+      "Indian agriculture agro",
+      "best agriculture agro India",
+      "agriculture agro services India"
+    ],
+    "industryTerms": [
+      "precision agriculture",
+      "farm equipment",
+      "organic farming",
+      "agro processing"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

@@ -1,6 +1,5 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T19:44:01.205Z
-// Generated with enhanced image and component support
+// Generated Site Configuration for Industrial Machinery & Equipment Sector
+// Auto-generated on 2025-07-19T15:38:45.067Z
 
 export const siteConfig = {
   "site": {
@@ -40,8 +39,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-blue-700",
       "accent": "bg-blue-100",
       "text": "text-blue-600",
-      "gradient": "from-blue-600 to-blue-800",
-      "description": "Professional and trustworthy"
+      "gradient": "from-blue-600 to-blue-800"
     },
     "green": {
       "primary": "bg-green-600",
@@ -55,8 +53,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-purple-700",
       "accent": "bg-purple-100",
       "text": "text-purple-600",
-      "gradient": "from-purple-600 to-purple-800",
-      "description": "Creative and innovative"
+      "gradient": "from-purple-600 to-purple-800"
     },
     "red": {
       "primary": "bg-red-600",
@@ -70,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -86,10 +82,8 @@ export const siteConfig = {
     "subtitle": "From precision CNC machines to complete automation solutions, we deliver world-class industrial equipment that drives efficiency and productivity",
     "ctaText": "View Our Machinery",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=2070&h=1380&q=80",
-    "overlayOpacity": "bg-opacity-60",
-    "imageAlt": "Professional business environment",
-    "imageDescription": "Modern professional workspace"
+    "backgroundImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-60"
   },
   "clients": [
     {
@@ -159,7 +153,7 @@ export const siteConfig = {
       "shortDescription": "High-precision CNC machines for complex manufacturing",
       "description": "Advanced computer numerical control machining centers designed for high-precision manufacturing. Features multi-axis capabilities, automatic tool changers, and integrated quality control systems.",
       "price": "₹25,00,000 - ₹1,20,00,000",
-      "image": "https://images.unsplash.com/photo-1516996087931-5ae405802f4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "image": "https://images.unsplash.com/photo-1516996087931-5ae405802f4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
         "5-axis machining capability",
         "Automatic tool changer",
@@ -168,8 +162,7 @@ export const siteConfig = {
         "24/7 technical support",
         "Training included"
       ],
-      "category": "Precision Machinery",
-      "imageAlt": "CNC Machining Center"
+      "category": "Precision Machinery"
     },
     {
       "name": "Industrial Automation Systems",
@@ -177,7 +170,7 @@ export const siteConfig = {
       "shortDescription": "Complete factory automation and control systems",
       "description": "Comprehensive automation solutions including PLCs, SCADA systems, robotic integration, and process control for manufacturing excellence.",
       "price": "₹5,00,000 - ₹50,00,000",
-      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
         "PLC programming",
         "SCADA integration",
@@ -186,8 +179,7 @@ export const siteConfig = {
         "Remote diagnostics",
         "Energy optimization"
       ],
-      "category": "Automation",
-      "imageAlt": "Conveyor System"
+      "category": "Automation"
     },
     {
       "name": "Material Handling Equipment",
@@ -195,7 +187,7 @@ export const siteConfig = {
       "shortDescription": "Conveyor systems and warehouse automation",
       "description": "Advanced material handling solutions including conveyor systems, automated storage, and warehouse management systems for efficient logistics.",
       "price": "₹2,00,000 - ₹15,00,000",
-      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
         "Modular design",
         "Variable speed control",
@@ -204,8 +196,7 @@ export const siteConfig = {
         "Custom configurations",
         "Installation support"
       ],
-      "category": "Material Handling",
-      "imageAlt": "Industrial Robot"
+      "category": "Material Handling"
     }
   ],
   "about": {
@@ -279,32 +270,55 @@ export const siteConfig = {
     "Make in India"
   ],
   "sector": "Industrial Machinery & Equipment",
-  "layoutTemplate": "corporate_professional",
-  "componentVariations": {
-    "navbar": "horizontal_classic",
-    "hero": "classic_centered",
-    "products": "grid_classic",
-    "about": "split_content",
-    "testimonials": "carousel_classic",
-    "footer": "multi_column"
+  "businessContext": "B2B",
+  "targetAudience": "Industrial buyers, manufacturing managers, procurement teams",
+  "marketPosition": {
+    "primary": "Premium technology provider",
+    "differentiators": [
+      "Advanced automation",
+      "Local service network",
+      "Custom solutions"
+    ],
+    "competitiveAdvantage": "Deep understanding of Indian manufacturing needs with global technology standards"
   },
-  "designMood": "professional",
-  "trustLevel": "high",
-  "team": [
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Manufacturing manager",
-      "role": "manager"
+  "contentStrategy": {
+    "tone": "Professional, technical, authoritative",
+    "messaging": [
+      "Customer satisfaction is our priority",
+      "Dedicated support every step",
+      "Your success is our mission",
+      "Partnership beyond products"
+    ],
+    "visualStyle": {
+      "primary": "factory, machinery, industrial environment",
+      "secondary": "workers, precision, modern equipment",
+      "style": "professional, clean, technical"
     }
-  ]
+  },
+  "seo": {
+    "localKeywords": [
+      "industrial machinery India",
+      "industrial machinery manufacturer India",
+      "industrial machinery supplier Mumbai",
+      "industrial machinery company Delhi",
+      "Indian industrial machinery",
+      "best industrial machinery India",
+      "industrial machinery services India"
+    ],
+    "industryTerms": [
+      "CNC machines",
+      "automation",
+      "manufacturing equipment",
+      "industrial tools"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

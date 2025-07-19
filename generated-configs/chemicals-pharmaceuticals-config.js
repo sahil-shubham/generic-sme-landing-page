@@ -1,16 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T19:44:01.205Z
-// Generated with enhanced image and component support
+// Generated Site Configuration for Chemicals and Pharmaceuticals Sector
+// Auto-generated on 2025-07-19T15:38:45.069Z
 
 export const siteConfig = {
   "site": {
-    "name": "IndoMach Solutions",
-    "title": "Industrial Machinery & Equipment Specialists",
-    "description": "Leading manufacturer and supplier of industrial machinery, automation solutions, and precision equipment for modern manufacturing",
+    "name": "ChemPharma Industries",
+    "title": "Quality Chemicals & Pharmaceutical Solutions",
+    "description": "Manufacturing high-quality chemicals and pharmaceutical products with stringent quality controls and regulatory compliance",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "industrial machinery, manufacturing equipment, automation, precision tools, factory equipment, CNC machines"
+    "keywords": "chemicals, pharmaceuticals, API, drug manufacturing, specialty chemicals, research, quality control"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -31,8 +30,8 @@ export const siteConfig = {
   },
   "theme": {
     "primary": "blue",
-    "style": "modern",
-    "layout": "wide"
+    "style": "professional",
+    "layout": "centered"
   },
   "colors": {
     "blue": {
@@ -40,8 +39,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-blue-700",
       "accent": "bg-blue-100",
       "text": "text-blue-600",
-      "gradient": "from-blue-600 to-blue-800",
-      "description": "Professional and trustworthy"
+      "gradient": "from-blue-600 to-blue-800"
     },
     "green": {
       "primary": "bg-green-600",
@@ -55,8 +53,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-purple-700",
       "accent": "bg-purple-100",
       "text": "text-purple-600",
-      "gradient": "from-purple-600 to-purple-800",
-      "description": "Creative and innovative"
+      "gradient": "from-purple-600 to-purple-800"
     },
     "red": {
       "primary": "bg-red-600",
@@ -70,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -82,14 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Powering India's Manufacturing Revolution",
-    "subtitle": "From precision CNC machines to complete automation solutions, we deliver world-class industrial equipment that drives efficiency and productivity",
-    "ctaText": "View Our Machinery",
+    "title": "Advancing Healthcare Through Chemistry",
+    "subtitle": "Our state-of-the-art manufacturing facilities produce premium chemicals and pharmaceutical products that meet global quality standards and contribute to better health outcomes",
+    "ctaText": "View Products",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=2070&h=1380&q=80",
-    "overlayOpacity": "bg-opacity-60",
-    "imageAlt": "Professional business environment",
-    "imageDescription": "Modern professional workspace"
+    "backgroundImage": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-60"
   },
   "clients": [
     {
@@ -154,58 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "CNC Machining Centers",
-      "slug": "cnc-machining-centers",
-      "shortDescription": "High-precision CNC machines for complex manufacturing",
-      "description": "Advanced computer numerical control machining centers designed for high-precision manufacturing. Features multi-axis capabilities, automatic tool changers, and integrated quality control systems.",
-      "price": "₹25,00,000 - ₹1,20,00,000",
-      "image": "https://images.unsplash.com/photo-1516996087931-5ae405802f4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Active Pharmaceutical Ingredients",
+      "slug": "active-pharmaceutical-ingredients",
+      "shortDescription": "High-purity APIs for drug manufacturing",
+      "description": "Premium quality Active Pharmaceutical Ingredients manufactured under cGMP conditions with complete documentation and regulatory support for generic drug manufacturers.",
+      "price": "₹2,000 - ₹50,000 per kg",
+      "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "5-axis machining capability",
-        "Automatic tool changer",
-        "In-process measurement",
-        "CAM software included",
-        "24/7 technical support",
-        "Training included"
+        "cGMP certified",
+        "DMF support",
+        "Analytical testing",
+        "Regulatory documentation",
+        "Custom synthesis",
+        "Scale-up support"
       ],
-      "category": "Precision Machinery",
-      "imageAlt": "CNC Machining Center"
+      "category": "APIs"
     },
     {
-      "name": "Industrial Automation Systems",
-      "slug": "industrial-automation-systems",
-      "shortDescription": "Complete factory automation and control systems",
-      "description": "Comprehensive automation solutions including PLCs, SCADA systems, robotic integration, and process control for manufacturing excellence.",
-      "price": "₹5,00,000 - ₹50,00,000",
-      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Specialty Chemical Solutions",
+      "slug": "specialty-chemical-solutions",
+      "shortDescription": "Custom chemicals for industrial applications",
+      "description": "Specialized chemical solutions for various industries including agrochemicals, dyes, and industrial intermediates with custom synthesis capabilities.",
+      "price": "₹500 - ₹20,000 per kg",
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "PLC programming",
-        "SCADA integration",
-        "Robotic automation",
-        "Process monitoring",
-        "Remote diagnostics",
-        "Energy optimization"
+        "Custom synthesis",
+        "Pilot scale",
+        "Process optimization",
+        "Quality assurance",
+        "Technical support",
+        "Regulatory compliance"
       ],
-      "category": "Automation",
-      "imageAlt": "Conveyor System"
+      "category": "Specialty Chemicals"
     },
     {
-      "name": "Material Handling Equipment",
-      "slug": "material-handling-equipment",
-      "shortDescription": "Conveyor systems and warehouse automation",
-      "description": "Advanced material handling solutions including conveyor systems, automated storage, and warehouse management systems for efficient logistics.",
-      "price": "₹2,00,000 - ₹15,00,000",
-      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Quality Control Services",
+      "slug": "quality-control-services",
+      "shortDescription": "Comprehensive analytical testing services",
+      "description": "Full-service analytical laboratory providing comprehensive testing services for pharmaceuticals, chemicals, and related products with NABL accreditation.",
+      "price": "₹1,000 - ₹25,000 per test",
+      "image": "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Modular design",
-        "Variable speed control",
-        "Safety systems",
-        "Easy maintenance",
-        "Custom configurations",
-        "Installation support"
+        "NABL accredited",
+        "Method development",
+        "Validation studies",
+        "Stability testing",
+        "Impurity profiling",
+        "Regulatory support"
       ],
-      "category": "Material Handling",
-      "imageAlt": "Industrial Robot"
+      "category": "Testing Services"
     }
   ],
   "about": {
@@ -265,46 +256,71 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Equipment Installation & Commissioning",
-    "Preventive Maintenance Programs",
-    "Technical Training & Certification",
-    "Spare Parts & Service Support",
-    "Equipment Modernization",
-    "Performance Optimization"
+    "Contract Manufacturing",
+    "Process Development",
+    "Regulatory Consulting",
+    "Quality Assurance",
+    "Custom Synthesis",
+    "Analytical Method Development"
   ],
   "certifications": [
+    "WHO-GMP",
+    "US FDA",
+    "EU GMP",
     "ISO 9001:2015",
-    "CE Marking",
-    "BIS Standards",
-    "Make in India"
+    "NABL Accredited",
+    "DSIR Recognized"
   ],
-  "sector": "Industrial Machinery & Equipment",
-  "layoutTemplate": "corporate_professional",
-  "componentVariations": {
-    "navbar": "horizontal_classic",
-    "hero": "classic_centered",
-    "products": "grid_classic",
-    "about": "split_content",
-    "testimonials": "carousel_classic",
-    "footer": "multi_column"
+  "sector": "Chemicals and Pharmaceuticals",
+  "businessContext": "B2B",
+  "targetAudience": "Business professionals, decision makers, technical experts",
+  "marketPosition": {
+    "primary": "Quality and compliance leader",
+    "differentiators": [
+      "Regulatory compliance",
+      "Quality systems",
+      "R&D capabilities"
+    ],
+    "competitiveAdvantage": "World-class quality systems meeting global regulatory standards"
   },
-  "designMood": "professional",
-  "trustLevel": "high",
-  "team": [
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Manufacturing manager",
-      "role": "manager"
+  "contentStrategy": {
+    "tone": "Scientific, precise, trustworthy",
+    "messaging": [
+      "Quality is our commitment",
+      "Excellence in every detail",
+      "Uncompromising quality standards",
+      "Precision and perfection"
+    ],
+    "visualStyle": {
+      "primary": "factory, machinery, industrial environment",
+      "secondary": "workers, precision, modern equipment",
+      "style": "professional, clean, technical"
     }
-  ]
+  },
+  "seo": {
+    "localKeywords": [
+      "chemicals pharmaceuticals India",
+      "chemicals pharmaceuticals manufacturer India",
+      "chemicals pharmaceuticals supplier Mumbai",
+      "chemicals pharmaceuticals company Delhi",
+      "Indian chemicals pharmaceuticals",
+      "best chemicals pharmaceuticals India",
+      "chemicals pharmaceuticals services India"
+    ],
+    "industryTerms": [
+      "pharmaceutical manufacturing",
+      "chemical industry",
+      "API manufacturing",
+      "drug development"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };

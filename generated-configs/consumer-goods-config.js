@@ -1,16 +1,15 @@
-// Site Configuration - Easily customizable by LLM
-// Last modified: 2025-07-19T19:44:01.205Z
-// Generated with enhanced image and component support
+// Generated Site Configuration for Consumer Goods and Household Products Sector
+// Auto-generated on 2025-07-19T15:38:45.069Z
 
 export const siteConfig = {
   "site": {
-    "name": "IndoMach Solutions",
-    "title": "Industrial Machinery & Equipment Specialists",
-    "description": "Leading manufacturer and supplier of industrial machinery, automation solutions, and precision equipment for modern manufacturing",
+    "name": "HomeComfort Essentials",
+    "title": "Quality Consumer Goods & Household Products",
+    "description": "Innovative and affordable consumer products that enhance daily life with quality, convenience, and value for Indian families",
     "url": "https://yourcompany.com",
     "logo": "/logo.png",
     "favicon": "/favicon.ico",
-    "keywords": "industrial machinery, manufacturing equipment, automation, precision tools, factory equipment, CNC machines"
+    "keywords": "consumer goods, household products, kitchen appliances, home care, personal care, FMCG, retail"
   },
   "contact": {
     "email": "hello@yourcompany.com",
@@ -30,7 +29,7 @@ export const siteConfig = {
     }
   },
   "theme": {
-    "primary": "blue",
+    "primary": "pink",
     "style": "modern",
     "layout": "wide"
   },
@@ -40,8 +39,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-blue-700",
       "accent": "bg-blue-100",
       "text": "text-blue-600",
-      "gradient": "from-blue-600 to-blue-800",
-      "description": "Professional and trustworthy"
+      "gradient": "from-blue-600 to-blue-800"
     },
     "green": {
       "primary": "bg-green-600",
@@ -55,8 +53,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-purple-700",
       "accent": "bg-purple-100",
       "text": "text-purple-600",
-      "gradient": "from-purple-600 to-purple-800",
-      "description": "Creative and innovative"
+      "gradient": "from-purple-600 to-purple-800"
     },
     "red": {
       "primary": "bg-red-600",
@@ -70,8 +67,7 @@ export const siteConfig = {
       "primaryHover": "hover:bg-orange-700",
       "accent": "bg-orange-100",
       "text": "text-orange-600",
-      "gradient": "from-orange-600 to-orange-800",
-      "description": "Warm and approachable"
+      "gradient": "from-orange-600 to-orange-800"
     },
     "pink": {
       "primary": "bg-pink-600",
@@ -82,14 +78,12 @@ export const siteConfig = {
     }
   },
   "hero": {
-    "title": "Powering India's Manufacturing Revolution",
-    "subtitle": "From precision CNC machines to complete automation solutions, we deliver world-class industrial equipment that drives efficiency and productivity",
-    "ctaText": "View Our Machinery",
+    "title": "Enhancing Every Indian Home",
+    "subtitle": "From innovative kitchen appliances to essential household products, we create solutions that make daily life more convenient, comfortable, and enjoyable for families across India",
+    "ctaText": "Shop Products",
     "ctaLink": "/products",
-    "backgroundImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=2070&h=1380&q=80",
-    "overlayOpacity": "bg-opacity-60",
-    "imageAlt": "Professional business environment",
-    "imageDescription": "Modern professional workspace"
+    "backgroundImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "overlayOpacity": "bg-opacity-45"
   },
   "clients": [
     {
@@ -154,58 +148,55 @@ export const siteConfig = {
   ],
   "products": [
     {
-      "name": "CNC Machining Centers",
-      "slug": "cnc-machining-centers",
-      "shortDescription": "High-precision CNC machines for complex manufacturing",
-      "description": "Advanced computer numerical control machining centers designed for high-precision manufacturing. Features multi-axis capabilities, automatic tool changers, and integrated quality control systems.",
-      "price": "₹25,00,000 - ₹1,20,00,000",
-      "image": "https://images.unsplash.com/photo-1516996087931-5ae405802f4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Smart Kitchen Appliances",
+      "slug": "smart-kitchen-appliances",
+      "shortDescription": "Modern kitchen solutions for Indian homes",
+      "description": "Innovative kitchen appliances designed specifically for Indian cooking styles, featuring energy efficiency, durability, and user-friendly operation.",
+      "price": "₹2,500 - ₹35,000",
+      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "5-axis machining capability",
-        "Automatic tool changer",
-        "In-process measurement",
-        "CAM software included",
-        "24/7 technical support",
-        "Training included"
+        "Energy efficient",
+        "Indian recipes",
+        "Easy cleaning",
+        "Compact design",
+        "Safety features",
+        "Warranty included"
       ],
-      "category": "Precision Machinery",
-      "imageAlt": "CNC Machining Center"
+      "category": "Kitchen Appliances"
     },
     {
-      "name": "Industrial Automation Systems",
-      "slug": "industrial-automation-systems",
-      "shortDescription": "Complete factory automation and control systems",
-      "description": "Comprehensive automation solutions including PLCs, SCADA systems, robotic integration, and process control for manufacturing excellence.",
-      "price": "₹5,00,000 - ₹50,00,000",
-      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Eco-Friendly Home Care",
+      "slug": "eco-friendly-home-care",
+      "shortDescription": "Natural and biodegradable cleaning products",
+      "description": "Environmentally conscious home care products made from natural ingredients that are safe for families while being effective against dirt and germs.",
+      "price": "₹150 - ₹800",
+      "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "PLC programming",
-        "SCADA integration",
-        "Robotic automation",
-        "Process monitoring",
-        "Remote diagnostics",
-        "Energy optimization"
+        "Natural ingredients",
+        "Biodegradable",
+        "Child safe",
+        "Effective cleaning",
+        "Pleasant fragrance",
+        "Value packs"
       ],
-      "category": "Automation",
-      "imageAlt": "Conveyor System"
+      "category": "Home Care"
     },
     {
-      "name": "Material Handling Equipment",
-      "slug": "material-handling-equipment",
-      "shortDescription": "Conveyor systems and warehouse automation",
-      "description": "Advanced material handling solutions including conveyor systems, automated storage, and warehouse management systems for efficient logistics.",
-      "price": "₹2,00,000 - ₹15,00,000",
-      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=800&h=600&q=80",
+      "name": "Personal Care Essentials",
+      "slug": "personal-care-essentials",
+      "shortDescription": "Daily essentials for personal hygiene and care",
+      "description": "Complete range of personal care products including skincare, hair care, and hygiene essentials formulated for Indian skin and hair types.",
+      "price": "₹99 - ₹1,500",
+      "image": "https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "features": [
-        "Modular design",
-        "Variable speed control",
-        "Safety systems",
-        "Easy maintenance",
-        "Custom configurations",
-        "Installation support"
+        "Dermatologically tested",
+        "Natural extracts",
+        "All skin types",
+        "Paraben free",
+        "Value pricing",
+        "Family size options"
       ],
-      "category": "Material Handling",
-      "imageAlt": "Industrial Robot"
+      "category": "Personal Care"
     }
   ],
   "about": {
@@ -265,46 +256,70 @@ export const siteConfig = {
     }
   ],
   "services": [
-    "Equipment Installation & Commissioning",
-    "Preventive Maintenance Programs",
-    "Technical Training & Certification",
-    "Spare Parts & Service Support",
-    "Equipment Modernization",
-    "Performance Optimization"
+    "Retail Distribution Network",
+    "Customer Support Services",
+    "Product Demonstration",
+    "Home Delivery Options",
+    "Bulk Purchase Discounts",
+    "Loyalty Programs"
   ],
   "certifications": [
-    "ISO 9001:2015",
-    "CE Marking",
+    "ISI Mark",
     "BIS Standards",
-    "Make in India"
+    "FSSAI Licensed",
+    "ISO 9001:2015",
+    "Eco-Mark Certified"
   ],
-  "sector": "Industrial Machinery & Equipment",
-  "layoutTemplate": "corporate_professional",
-  "componentVariations": {
-    "navbar": "horizontal_classic",
-    "hero": "classic_centered",
-    "products": "grid_classic",
-    "about": "split_content",
-    "testimonials": "carousel_classic",
-    "footer": "multi_column"
+  "sector": "Consumer Goods and Household Products",
+  "businessContext": "B2C/B2B",
+  "targetAudience": "End consumers, retailers, distributors",
+  "marketPosition": {
+    "primary": "Value and convenience champion",
+    "differentiators": [
+      "Indian preferences",
+      "Value pricing",
+      "Wide distribution"
+    ],
+    "competitiveAdvantage": "Products designed specifically for Indian households with unmatched value"
   },
-  "designMood": "professional",
-  "trustLevel": "high",
-  "team": [
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Industrial engineer",
-      "role": "engineer"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=500&h=500&q=80",
-      "alt": "Manufacturing manager",
-      "role": "manager"
+  "contentStrategy": {
+    "tone": "Friendly, accessible, value-oriented",
+    "messaging": [
+      "Premium quality at competitive prices",
+      "Maximum value for your investment",
+      "Cost-effective solutions",
+      "Quality that pays for itself"
+    ],
+    "visualStyle": {
+      "primary": "home, family, lifestyle",
+      "secondary": "comfort, convenience, quality",
+      "style": "warm, inviting, accessible"
     }
-  ]
+  },
+  "seo": {
+    "localKeywords": [
+      "consumer goods India",
+      "consumer goods manufacturer India",
+      "consumer goods supplier Mumbai",
+      "consumer goods company Delhi",
+      "Indian consumer goods",
+      "best consumer goods India",
+      "consumer goods services India"
+    ],
+    "industryTerms": [
+      "household products",
+      "kitchen appliances",
+      "home care",
+      "FMCG"
+    ],
+    "targetRegions": [
+      "India",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Chennai",
+      "Pune",
+      "Hyderabad"
+    ]
+  }
 };
